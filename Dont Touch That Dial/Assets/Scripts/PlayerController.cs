@@ -4,7 +4,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject player;
-    private Vector2 currPlayerPosition = new Vector2(0,-2);
+    private Vector3 currPlayerPosition = new Vector2(0,-2);
+    private Vector3 moveDist = Vector3.zero;
     private float upperBarrier = 0;
     private float lowerBarrier = -4;
     private float leftBarrier = -2;
@@ -13,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private bool disableDown;
     private bool disableLeft;
     private bool disableRight;
+    private bool moving = true;
+    private float moveTimer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,22 +28,66 @@ public class PlayerController : MonoBehaviour
     {
         BarrierCheck();
         
-        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && !disableLeft){
+        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && !disableLeft && !moving){
             currPlayerPosition.x -= 1;
+            moveDist.x -= 1;
         }
-        if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && !disableRight)
+        if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && !disableRight && !moving)
         {
             currPlayerPosition.x += 1;
+            moveDist.x += 1;
         }
-        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && !disableUp)
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && !disableUp && !moving)
         {
             currPlayerPosition.y += 1;
+            moveDist.y += 1;
         }
-        if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && !disableDown)
+        if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && !disableDown && !moving)
         {
             currPlayerPosition.y -= 1;
+            moveDist.y -= 1;
         }
-        player.gameObject.transform.position = currPlayerPosition;
+
+        if (player.gameObject.transform.position != currPlayerPosition)
+        {
+            moving = true;
+            Moving(moveDist);
+            
+        } else
+        {
+            moveDist = Vector3.zero;
+            moving = false;
+        }
+
+        void Moving(Vector3 desiredMovement)
+        {
+            if (desiredMovement.x == -1 && player.gameObject.transform.position.x > currPlayerPosition.x)
+            {
+                ActuallyMovePlayer();
+            } else if (desiredMovement.x == 1 && player.gameObject.transform.position.x < currPlayerPosition.x)
+            {
+                ActuallyMovePlayer();
+            } else if (desiredMovement.y == -1 && player.gameObject.transform.position.y > currPlayerPosition.y)
+            {
+                ActuallyMovePlayer();
+            } else if (desiredMovement.y == 1 && player.gameObject.transform.position.y < currPlayerPosition.y)
+            {
+                ActuallyMovePlayer();
+            }
+        }
+        void ActuallyMovePlayer()
+        {
+            player.gameObject.transform.position += moveDist * Time.deltaTime * 5;
+            moveTimer = 0.01f;
+        }
+        if (moveTimer > 0)
+        {
+            moveTimer -= Time.deltaTime;
+        }
+        else
+        {
+            player.gameObject.transform.position = new Vector3(Mathf.RoundToInt(player.gameObject.transform.position.x), Mathf.RoundToInt(player.gameObject.transform.position.y));
+        }
     }
 
 
