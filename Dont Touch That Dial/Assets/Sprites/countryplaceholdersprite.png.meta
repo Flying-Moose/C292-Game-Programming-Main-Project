@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: e49eb35792acb0d40930432ea40150e7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2207574142809398237
+    second: countryplaceholdersprite_0
+  - first:
+      213: -1993015636993098461
+    second: countryplaceholdersprite_1
+  - first:
+      213: -591777342040071904
+    second: countryplaceholdersprite_2
+  - first:
+      213: -4817550425999506070
+    second: countryplaceholdersprite_3
+  - first:
+      213: 9213882916506755320
+    second: countryplaceholdersprite_4
+  - first:
+      213: 4458249936398824565
+    second: countryplaceholdersprite_5
+  - first:
+      213: 3074072071275511698
+    second: countryplaceholdersprite_6
+  - first:
+      213: -5801649726011583468
+    second: countryplaceholdersprite_7
+  - first:
+      213: 5979373465588979571
+    second: countryplaceholdersprite_8
+  - first:
+      213: -8932385003166811136
+    second: countryplaceholdersprite_9
+  - first:
+      213: 2893426015915014939
+    second: countryplaceholdersprite_10
+  - first:
+      213: -8195456521425419841
+    second: countryplaceholdersprite_11
+  - first:
+      213: 1274494578785619829
+    second: countryplaceholdersprite_12
+  - first:
+      213: 209324161201050461
+    second: countryplaceholdersprite_13
+  - first:
+      213: -1189041759022255054
+    second: countryplaceholdersprite_14
+  - first:
+      213: 2139783209912464280
+    second: countryplaceholdersprite_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: countryplaceholdersprite_0
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 591
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324228a630f1d51e0800000000000000
+      internalID: -2207574142809398237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 639
+        width: 114
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d3a3d66d26754e0800000000000000
+      internalID: -1993015636993098461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_2
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 627
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021a39d84a599c7f0800000000000000
+      internalID: -591777342040071904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_3
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 615
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6584ca796f942db0800000000000000
+      internalID: -4817550425999506070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_4
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 571
+        width: 70
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f0ec6002b94edf70800000000000000
+      internalID: 9213882916506755320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_5
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 627
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574b5f242b2eedd30800000000000000
+      internalID: 4458249936398824565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_6
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 231
+        width: 174
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f735ef24c49aa20800000000000000
+      internalID: 3074072071275511698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_7
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 163
+        width: 206
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41456d900566c7fa0800000000000000
+      internalID: -5801649726011583468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_8
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 387
+        width: 170
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377d3d3ac700bf250800000000000000
+      internalID: 5979373465588979571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_9
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 219
+        width: 62
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c37395a2bc90480800000000000000
+      internalID: -8932385003166811136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_10
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 351
+        width: 102
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1bfc76a1a3872820800000000000000
+      internalID: 2893426015915014939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_11
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 351
+        width: 70
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1874417b3e34e80800000000000000
+      internalID: -8195456521425419841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_12
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 111
+        width: 86
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f8dac111aefa110800000000000000
+      internalID: 1274494578785619829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_13
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 147
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d539b4f273ba7e200800000000000000
+      internalID: 209324161201050461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_14
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 107
+        width: 114
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2347f5ae1dcaf7fe0800000000000000
+      internalID: -1189041759022255054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryplaceholdersprite_15
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 147
+        width: 62
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8937d2b0e7902bd10800000000000000
+      internalID: 2139783209912464280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      countryplaceholdersprite_0: -2207574142809398237
+      countryplaceholdersprite_1: -1993015636993098461
+      countryplaceholdersprite_10: 2893426015915014939
+      countryplaceholdersprite_11: -8195456521425419841
+      countryplaceholdersprite_12: 1274494578785619829
+      countryplaceholdersprite_13: 209324161201050461
+      countryplaceholdersprite_14: -1189041759022255054
+      countryplaceholdersprite_15: 2139783209912464280
+      countryplaceholdersprite_2: -591777342040071904
+      countryplaceholdersprite_3: -4817550425999506070
+      countryplaceholdersprite_4: 9213882916506755320
+      countryplaceholdersprite_5: 4458249936398824565
+      countryplaceholdersprite_6: 3074072071275511698
+      countryplaceholdersprite_7: -5801649726011583468
+      countryplaceholdersprite_8: 5979373465588979571
+      countryplaceholdersprite_9: -8932385003166811136
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
