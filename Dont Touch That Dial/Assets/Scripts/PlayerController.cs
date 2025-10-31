@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private bool disableRight;
     private bool moving = true;
     private float moveTimer;
+    private float invulTimer = 0;
+    private float health = 3;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -88,9 +90,12 @@ public class PlayerController : MonoBehaviour
         {
             player.gameObject.transform.position = new Vector3(Mathf.RoundToInt(player.gameObject.transform.position.x), Mathf.RoundToInt(player.gameObject.transform.position.y));
         }
+
+        if (invulTimer > 0)
+        {
+            invulTimer -= Time.deltaTime;
+        }
     }
-
-
     public void BarrierCheck()
     {
         if (player.gameObject.transform.position.y == upperBarrier){ disableUp = true; }
@@ -101,5 +106,14 @@ public class PlayerController : MonoBehaviour
         else { disableLeft = false; }
         if (player.gameObject.transform.position.x == rightBarrier) { disableRight = true; }
         else { disableRight = false; }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Attack") && invulTimer <= 0)
+        {
+            health -= 1;
+            Debug.Log("ouchie!");
+            invulTimer = 1;
+        }
     }
 }
