@@ -40,11 +40,21 @@ public class AttackManager : MonoBehaviour
     GameObject blast2 = null;
     GameObject banjoSwipe = null;
 
+    GameObject stanza1 = null;
+    GameObject stanza2 = null;
+    GameObject note1 = null;
+    GameObject note2 = null;
+    GameObject note3 = null;
+    GameObject flute = null;
+    GameObject paper1 = null;
+    GameObject paper2 = null;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         InstantiateEverything();
-        attackPause = 30;
+        // attackPause = 30;
+        attackPause = 50;
     }
 
     // Update is called once per frame
@@ -134,7 +144,66 @@ public class AttackManager : MonoBehaviour
         }
         void CLAttacks()
         {
-
+            if (attackPause > 44)
+            {
+                stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
+                stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+            }
+            else if (attackPause > 40)
+            {
+                note1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 8;
+                stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
+                stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+            }
+            else if (attackPause > 35)
+            {
+                note2.transform.position += new Vector3(0.1f, -1) * Time.deltaTime * 8;
+                stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
+                stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+            }
+            else if (attackPause > 30)
+            {
+                note3.transform.position += new Vector3(-0.05f, -1) * Time.deltaTime * 8;
+                stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
+                stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+            }
+            else if (attackPause > 26.6)
+            {
+                note1.transform.position = new Vector3(0, 10);
+                note2.transform.position = new Vector3(0, 10);
+                note3.transform.position = new Vector3(0, 10);
+                stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
+                stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+                flute.transform.position += Vector3.down * Time.deltaTime * 7;
+            }
+            else if (attackPause > 12.2)
+            {
+                stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
+                stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+                flute.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 5;
+            } else if (attackPause > 8)
+            {
+                stanza1.transform.position = new Vector3(20, -2);
+                stanza2.transform.position = new Vector3(31.5f, -3);
+                flute.transform.position += Vector3.down * Time.deltaTime * 7;
+                paper1.transform.position += new Vector3(-1, -1) * Time.deltaTime * 7;
+            }
+            else if (attackPause > 4)
+            {
+                paper1.transform.position += new Vector3(-1.5f, -1) * Time.deltaTime * 5;
+                paper2.transform.position += new Vector3(1, -1.5f) * Time.deltaTime * 5;
+            }
+            else if (attackPause > 1)
+            {
+                flute.transform.position = new Vector3(0.1f, 10);
+                paper2.transform.position += new Vector3(1.5f, -1) * Time.deltaTime * 5;
+            }
+            else if (attackPause > 0)
+            {
+                paper1.transform.position = new Vector3(20, 15);
+                paper2.transform.position = new Vector3(-16, 15);
+                attackPause = 50;
+            }
         }
         void FLAttacks()
         {
@@ -168,5 +237,14 @@ public class AttackManager : MonoBehaviour
         blast = Instantiate(COboom, new Vector3(-15, -2), Quaternion.identity);
         blast2 = Instantiate(COboom, new Vector3(15, -4), Quaternion.identity);
         banjoSwipe = Instantiate(CObanjoswipe, new Vector3(0, 10), Quaternion.identity);
+
+        stanza1 = Instantiate(CLlines, new Vector3(20, -2), Quaternion.identity);
+        stanza2 = Instantiate(CLlines, new Vector3(31.5f, -3), Quaternion.identity);
+        note1 = Instantiate(CLnote1, new Vector3(0, 10), Quaternion.identity);
+        note2 = Instantiate(CLnote2, new Vector3(0, 10), Quaternion.identity);
+        note3 = Instantiate(CLnote3, new Vector3(0, 10), Quaternion.identity);
+        flute = Instantiate(CLflute, new Vector3(0.1f, 10), Quaternion.identity);
+        paper1 = Instantiate(CLpaper1, new Vector3(20, 15), Quaternion.identity);
+        paper2 = Instantiate(CLpaper2, new Vector3(-16, 15), Quaternion.identity);
     }
 }

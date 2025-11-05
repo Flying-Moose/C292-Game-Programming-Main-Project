@@ -23,7 +23,7 @@ public class DamageTile : MonoBehaviour
         damageTileNewPosition.y = 15;
         damageTile.gameObject.transform.position = damageTileNewPosition;
         readyToCountDown = true;
-        classical.SetActive(false);
+        country.SetActive(false);
         flamenco.SetActive(false);
     }
 
