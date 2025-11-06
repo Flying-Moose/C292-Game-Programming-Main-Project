@@ -49,12 +49,18 @@ public class AttackManager : MonoBehaviour
     GameObject paper1 = null;
     GameObject paper2 = null;
 
+    bool COInit = true;
+    bool CLInit = true;
+    bool FLInit = true;
+
+    public GameObject COcollection;
+    public GameObject CLcollection;
+    public GameObject FLcollection;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         InstantiateEverything();
-        // attackPause = 30;
-        attackPause = 50;
     }
 
     // Update is called once per frame
@@ -62,14 +68,38 @@ public class AttackManager : MonoBehaviour
     {
         if (COsprite.activeSelf)
         {
+            if (COInit)
+            {
+                COcollection.SetActive(true);
+                FLcollection.SetActive(false);
+                attackPause = 30;
+                CLInit = true;
+                COInit = false;
+            }
             COAttacks();
         } 
         else if (CLsprite.activeSelf)
         {
+            if (CLInit)
+            {
+                CLcollection.SetActive(true);
+                COcollection.SetActive(false);
+                attackPause = 50;
+                FLInit = true;
+                CLInit = false;
+            }
             CLAttacks();
         } 
         else if (FLsprite.activeSelf)
         {
+            if (FLInit)
+            {
+                FLcollection.SetActive(true);
+                CLcollection.SetActive(false);
+                attackPause = 50;
+                COInit = true;
+                FLInit = false;
+            }
             FLAttacks();
         }
 
