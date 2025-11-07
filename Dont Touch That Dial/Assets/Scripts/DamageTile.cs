@@ -24,7 +24,7 @@ public class DamageTile : MonoBehaviour
         damageTile.gameObject.transform.position = damageTileNewPosition;
         readyToCountDown = true;
         classical.SetActive(false);
-        country.SetActive(false);
+        flamenco.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,11 +32,11 @@ public class DamageTile : MonoBehaviour
     {
         if (readyToCountDown)
         {
-            if (damageInbetweenTimer > 0 && !stopDamageTile)
+            if (damageInbetweenTimer > 0)
             {
                 damageInbetweenTimer -= Time.deltaTime;
             }
-            else
+            else if (!stopDamageTile)
             {
                 randX = Random.Range(-2, 2);
                 randY = Random.Range(0, -4);

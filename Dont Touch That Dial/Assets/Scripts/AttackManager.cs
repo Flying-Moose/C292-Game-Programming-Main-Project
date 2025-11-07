@@ -116,77 +116,88 @@ public class AttackManager : MonoBehaviour
                 FLInit = false;
             }
             FLAttacks();
+        } 
+        else
+        {
+            playerCamera.transform.eulerAngles = Vector3.zero;
+            FLcollection.SetActive(false);
         }
 
-        void COAttacks()
-        {
-            if (attackPause > 26.4)
+            void COAttacks()
             {
-                OneRandom(0, -4);
-                bomb.transform.position = new Vector3(-15, randInt);
-                bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
-                bullet2.transform.position += Vector3.down * Time.deltaTime * 7;
-                bullet3.transform.position += Vector3.down * Time.deltaTime * 7;
+                if (attackPause > 26.4)
+                {
+                    OneRandom(0, -4);
+                    bomb.transform.position = new Vector3(-15, randInt);
+                    bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
+                    bullet2.transform.position += Vector3.down * Time.deltaTime * 7;
+                    bullet3.transform.position += Vector3.down * Time.deltaTime * 7;
+                }
+                else if (attackPause > 25.9)
+                {
+                    ifRand = true;
+                    bullet2.gameObject.transform.position = new Vector3(0, 10);
+                    bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
+                    bullet3.transform.position += Vector3.down * Time.deltaTime * 7;
+                    swipe.gameObject.transform.position = new Vector3(0, -2);
+                    splitBullet1.gameObject.transform.position = new Vector3(0, -3);
+                    splitBullet2.gameObject.transform.position = new Vector3(0, -3);
+                }
+                else if (attackPause > 24)
+                {
+                    OneRandom(0, -4);
+                    bomb2.transform.position = new Vector3(15, randInt);
+                    bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
+                    bullet3.transform.position += Vector3.down * Time.deltaTime * 7;
+                    splitBullet1.transform.position -= new Vector3(-0.5f, -1) * Time.deltaTime * 7;
+                    splitBullet2.transform.position -= new Vector3(0.5f, 1) * Time.deltaTime * 7;
+                    swipe.gameObject.transform.position = new Vector3(0, 10);
+                }
+                else if (attackPause > 20)
+                {
+                    ifRand = true;
+                    splitBullet1.transform.position -= new Vector3(-0.5f, -1) * Time.deltaTime * 7;
+                    splitBullet2.transform.position -= new Vector3(0.5f, 1) * Time.deltaTime * 7;
+                    bomb.transform.position += Vector3.right * Time.deltaTime * 8;
+                }
+                else if (attackPause > 19.5)
+                {
+                    bullet1.gameObject.transform.position = new Vector3(-2, 11);
+                    bullet3.gameObject.transform.position = new Vector3(2, 11);
+                    blast.transform.position = bomb.transform.position;
+                    bomb.SetActive(false);
+                }
+                else if (attackPause > 15.5)
+                {
+                    bomb.SetActive(true);
+                    bomb.transform.position = new Vector3(-15, -2);
+                    blast.transform.position = new Vector3(-15, -2);
+                    bomb2.transform.position += Vector3.left * Time.deltaTime * 8;
+                }
+                else if (attackPause > 15)
+                {
+                    blast2.transform.position = bomb2.transform.position;
+                    bomb2.SetActive(false);
+                }
+                else if (attackPause > 13.5)
+                {
+                    bomb2.SetActive(true);
+                    bomb2.transform.position = new Vector3(15, -4);
+                    blast2.transform.position = new Vector3(15, -4);
+                }
+                else if (attackPause > 12.5)
+                {
+                    banjoSwipe.transform.position = new Vector3(0, 0);
+                }
+                else if (attackPause > 11.5)
+                {
+                    banjoSwipe.transform.position = new Vector3(0, 10);
+                }
+                else if (attackPause > 10)
+                {
+                    attackPause = 30;
+                }
             }
-            else if (attackPause > 25.9)
-            {
-                ifRand = true;
-                bullet2.gameObject.transform.position = new Vector3(0, 10);
-                bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
-                bullet3.transform.position += Vector3.down * Time.deltaTime * 7;
-                swipe.gameObject.transform.position = new Vector3(0, -2);
-                splitBullet1.gameObject.transform.position = new Vector3(0, -3);
-                splitBullet2.gameObject.transform.position = new Vector3(0, -3);
-            }
-            else if (attackPause > 24)
-            {
-                OneRandom(0, -4);
-                bomb2.transform.position = new Vector3(15, randInt);
-                bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
-                bullet3.transform.position += Vector3.down * Time.deltaTime * 7;
-                splitBullet1.transform.position -= new Vector3(-0.5f, -1) * Time.deltaTime * 7;
-                splitBullet2.transform.position -= new Vector3(0.5f, 1) * Time.deltaTime * 7;
-                swipe.gameObject.transform.position = new Vector3(0, 10);
-            }
-            else if (attackPause > 20)
-            {
-                ifRand = true;
-                splitBullet1.transform.position -= new Vector3(-0.5f, -1) * Time.deltaTime * 7;
-                splitBullet2.transform.position -= new Vector3(0.5f, 1) * Time.deltaTime * 7;
-                bomb.transform.position += Vector3.right * Time.deltaTime * 8;
-            }
-            else if (attackPause > 19.5)
-            {
-                bullet1.gameObject.transform.position = new Vector3(-2, 11);
-                bullet3.gameObject.transform.position = new Vector3(2, 11);
-                blast.transform.position = bomb.transform.position;
-                bomb.SetActive(false);   
-            } else if (attackPause > 15.5)
-            {
-                bomb.SetActive(true);
-                bomb.transform.position = new Vector3(-15, -2);
-                blast.transform.position = new Vector3(-15, -2);
-                bomb2.transform.position += Vector3.left * Time.deltaTime * 8;
-            } else if (attackPause > 15)
-            {
-                blast2.transform.position = bomb2.transform.position;
-                bomb2.SetActive(false);
-            } else if (attackPause > 13.5)
-            {
-                bomb2.SetActive(true);
-                bomb2.transform.position = new Vector3(15, -4);
-                blast2.transform.position = new Vector3(15, -4);
-            } else if (attackPause > 12.5)
-            {
-                banjoSwipe.transform.position = new Vector3(0, 0);
-            } else if (attackPause > 11.5)
-            {
-                banjoSwipe.transform.position = new Vector3(0, 10);
-            } else if (attackPause > 10)
-            {
-                attackPause = 30;
-            }
-        }
         void CLAttacks()
         {
             if (attackPause > 44)
@@ -281,8 +292,13 @@ public class AttackManager : MonoBehaviour
                 playerCamera.transform.eulerAngles = new Vector3(0, 0, -40);
                 fire1.transform.position += Vector3.left * Time.deltaTime * 9;
             }
+            else if (attackPause > 23)
+            {
+                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+            }
             else if (attackPause > 21.5f)
             {
+                playerCamera.transform.eulerAngles += new Vector3(0, 0, 30) * Time.deltaTime;
                 fire1.transform.position += Vector3.left * Time.deltaTime * 9;
             }
             else if (attackPause > 21)
@@ -290,16 +306,57 @@ public class AttackManager : MonoBehaviour
                 playerCamera.transform.eulerAngles = new Vector3(0, 0, 40);
                 fire1.transform.position += Vector3.left * Time.deltaTime * 9;
                 fire2.transform.position += Vector3.right * Time.deltaTime * 9;
-            } 
+            }
             else if (attackPause > 18)
             {
                 fire1.transform.position += Vector3.left * Time.deltaTime * 9;
                 fire2.transform.position += Vector3.right * Time.deltaTime * 9;
-            } else if (attackPause > 14.5f)
+            } 
+            else if (attackPause > 15.325f)
             {
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, -30) * Time.deltaTime;
                 fire1.transform.position += Vector3.left * Time.deltaTime * 9;
                 fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+            } 
+            else if (attackPause > 11)
+            {
+                fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+                petal1.transform.position = new Vector3(0, 3);
+                petal2.transform.position = new Vector3(0, 3);
+                petal3.transform.position = new Vector3(0, 3);
+                petal4.transform.position = new Vector3(0, 3);
+                petal1.SetActive(false);
+                petal2.SetActive(false);
+                petal3.SetActive(false);
+                petal4.SetActive(false);
+            }
+            else if (attackPause > 4)
+            {
+                fire1.transform.position = new Vector3(20, -1);
+                fire2.transform.position = new Vector3(-20, -3);
+                petal1.SetActive(true);
+                petal2.SetActive(true);
+                petal3.SetActive(true);
+                petal4.SetActive(true);
+                petal1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 3;
+                petal2.transform.position += new Vector3(-0.5f, -1.2f) * Time.deltaTime * 3;
+                petal3.transform.position += new Vector3(0.3f, -0.8f) * Time.deltaTime * 3;
+                petal4.transform.position += new Vector3(0.5f, -1.3f) * Time.deltaTime * 3;
+            }
+            else if (attackPause > 1)
+            {
+                petal1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 3;
+                petal2.transform.position += new Vector3(-0.5f, -1.2f) * Time.deltaTime * 3;
+                petal3.transform.position += new Vector3(0.3f, -0.8f) * Time.deltaTime * 3;
+                petal4.transform.position += new Vector3(0.5f, -1.3f) * Time.deltaTime * 3;
+            }
+            else if (attackPause > 0)
+            {
+                petal1.transform.position = new Vector3(0, 15);
+                petal2.transform.position = new Vector3(0, 15);
+                petal3.transform.position = new Vector3(0, 15);
+                petal4.transform.position = new Vector3(0, 15);
+                attackPause = 50;
             }
         }
         if (attackPause > 0)
@@ -362,5 +419,16 @@ public class AttackManager : MonoBehaviour
         fan = Instantiate(FLfan, new Vector3(-1, 20), Quaternion.identity);
         fire1 = Instantiate(FLfire, new Vector3(20, -1), Quaternion.identity);
         fire2 = Instantiate(FLfire, new Vector3(-20, -3), Quaternion.identity);
+        petal1 = Instantiate(FLpetal1, new Vector3(0, 15), Quaternion.identity);
+        petal2 = Instantiate(FLpetal1, new Vector3(0, 15), Quaternion.identity);
+        petal3 = Instantiate(FLpetal2, new Vector3(0, 15), Quaternion.identity);
+        petal4 = Instantiate(FLpetal2, new Vector3(0, 15), Quaternion.identity);
+        fan.transform.parent = FLcollection.transform;
+        fire1.transform.parent = FLcollection.transform;
+        fire2.transform.parent = FLcollection.transform;
+        petal1.transform.parent = FLcollection.transform;
+        petal2.transform.parent = FLcollection.transform;
+        petal3.transform.parent = FLcollection.transform;
+        petal4.transform.parent = FLcollection.transform;
     }
 }
