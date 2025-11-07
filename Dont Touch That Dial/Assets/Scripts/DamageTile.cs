@@ -24,7 +24,7 @@ public class DamageTile : MonoBehaviour
         damageTile.gameObject.transform.position = damageTileNewPosition;
         readyToCountDown = true;
         classical.SetActive(false);
-        flamenco.SetActive(false);
+        country.SetActive(false);
     }
 
     // Update is called once per frame

@@ -24,6 +24,11 @@ public class AttackManager : MonoBehaviour
     public GameObject CLpaper1;
     public GameObject CLpaper2;
 
+    public GameObject FLfan;
+    public GameObject FLfire;
+    public GameObject FLpetal1;
+    public GameObject FLpetal2;
+
     private float attackPause;
     private float randInt;
     private bool ifRand = true;
@@ -48,6 +53,16 @@ public class AttackManager : MonoBehaviour
     GameObject flute = null;
     GameObject paper1 = null;
     GameObject paper2 = null;
+
+    GameObject fan = null;
+    GameObject fire1 = null;
+    GameObject fire2 = null;
+    GameObject petal1 = null;
+    GameObject petal2 = null;
+    GameObject petal3 = null;
+    GameObject petal4 = null;
+
+    public GameObject playerCamera;
 
     bool COInit = true;
     bool CLInit = true;
@@ -237,7 +252,55 @@ public class AttackManager : MonoBehaviour
         }
         void FLAttacks()
         {
-
+            if (attackPause > 46.001)
+            {
+                playerCamera.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 6;
+            } 
+            else if (attackPause > 38)
+            {
+                fan.transform.position += Vector3.down * Time.deltaTime * 7;
+            }
+            else if (attackPause > 37.9f)
+            {
+                fan.transform.position = new Vector3(1, -10);
+            }
+            else if (attackPause > 32)
+            {
+                fan.transform.position += Vector3.up * Time.deltaTime * 7;
+            }
+            else if (attackPause > 27.999)
+            {
+                playerCamera.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 6;
+            }
+            else if (attackPause > 25.5f)
+            {
+                fan.transform.position = new Vector3(-1, 20);
+            }
+            else if (attackPause > 25)
+            {
+                playerCamera.transform.eulerAngles = new Vector3(0, 0, -40);
+                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+            }
+            else if (attackPause > 21.5f)
+            {
+                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+            }
+            else if (attackPause > 21)
+            {
+                playerCamera.transform.eulerAngles = new Vector3(0, 0, 40);
+                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+            } 
+            else if (attackPause > 18)
+            {
+                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+            } else if (attackPause > 14.5f)
+            {
+                playerCamera.transform.eulerAngles += new Vector3(0, 0, -30) * Time.deltaTime;
+                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+            }
         }
         if (attackPause > 0)
         {
@@ -267,6 +330,17 @@ public class AttackManager : MonoBehaviour
         blast = Instantiate(COboom, new Vector3(-15, -2), Quaternion.identity);
         blast2 = Instantiate(COboom, new Vector3(15, -4), Quaternion.identity);
         banjoSwipe = Instantiate(CObanjoswipe, new Vector3(0, 10), Quaternion.identity);
+        bullet1.transform.parent = COcollection.transform;
+        bullet2.transform.parent = COcollection.transform;
+        bullet3.transform.parent = COcollection.transform;
+        splitBullet1.transform.parent = COcollection.transform;
+        splitBullet2.transform.parent = COcollection.transform;
+        swipe.transform.parent = COcollection.transform;
+        bomb.transform.parent = COcollection.transform;
+        bomb2.transform.parent = COcollection.transform;
+        blast.transform.parent = COcollection.transform;
+        blast2.transform.parent = COcollection.transform;
+        banjoSwipe.transform.parent = COcollection.transform;
 
         stanza1 = Instantiate(CLlines, new Vector3(20, -2), Quaternion.identity);
         stanza2 = Instantiate(CLlines, new Vector3(31.5f, -3), Quaternion.identity);
@@ -276,5 +350,17 @@ public class AttackManager : MonoBehaviour
         flute = Instantiate(CLflute, new Vector3(0.1f, 10), Quaternion.identity);
         paper1 = Instantiate(CLpaper1, new Vector3(20, 15), Quaternion.identity);
         paper2 = Instantiate(CLpaper2, new Vector3(-16, 15), Quaternion.identity);
+        stanza1.transform.parent = CLcollection.transform;
+        stanza2.transform.parent = CLcollection.transform;
+        note1.transform.parent = CLcollection.transform;
+        note2.transform.parent = CLcollection.transform;
+        note3.transform.parent = CLcollection.transform;
+        flute.transform.parent = CLcollection.transform;
+        paper1.transform.parent = CLcollection.transform;
+        paper2.transform.parent = CLcollection.transform;
+
+        fan = Instantiate(FLfan, new Vector3(-1, 20), Quaternion.identity);
+        fire1 = Instantiate(FLfire, new Vector3(20, -1), Quaternion.identity);
+        fire2 = Instantiate(FLfire, new Vector3(-20, -3), Quaternion.identity);
     }
 }
