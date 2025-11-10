@@ -140,6 +140,8 @@ public class AttackManager : MonoBehaviour
                     bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
                     bullet3.transform.position += Vector3.down * Time.deltaTime * 7;
                     swipe.gameObject.transform.position = new Vector3(0, -2);
+                    splitBullet1.transform.eulerAngles = Vector3.zero;
+                    splitBullet2.transform.eulerAngles = Vector3.zero;
                     splitBullet1.gameObject.transform.position = new Vector3(0, -3);
                     splitBullet2.gameObject.transform.position = new Vector3(0, -3);
                 }
@@ -151,20 +153,26 @@ public class AttackManager : MonoBehaviour
                     bullet3.transform.position += Vector3.down * Time.deltaTime * 7;
                     splitBullet1.transform.position -= new Vector3(-0.5f, -1) * Time.deltaTime * 7;
                     splitBullet2.transform.position -= new Vector3(0.5f, 1) * Time.deltaTime * 7;
+                    splitBullet1.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
+                    splitBullet2.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
                     swipe.gameObject.transform.position = new Vector3(0, 10);
                 }
                 else if (attackPause > 20)
                 {
                     ifRand = true;
+                    splitBullet1.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
+                    splitBullet2.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
                     splitBullet1.transform.position -= new Vector3(-0.5f, -1) * Time.deltaTime * 7;
                     splitBullet2.transform.position -= new Vector3(0.5f, 1) * Time.deltaTime * 7;
                     bomb.transform.position += Vector3.right * Time.deltaTime * 8;
+                    bomb.transform.eulerAngles += new Vector3(0, 0, -30) * Time.deltaTime;
                 }
                 else if (attackPause > 19.5)
                 {
                     bullet1.gameObject.transform.position = new Vector3(-2, 11);
                     bullet3.gameObject.transform.position = new Vector3(2, 11);
                     blast.transform.position = bomb.transform.position;
+                    blast.transform.eulerAngles += new Vector3(0, 0, 30) * Time.deltaTime;
                     bomb.SetActive(false);
                 }
                 else if (attackPause > 15.5)
@@ -172,11 +180,14 @@ public class AttackManager : MonoBehaviour
                     bomb.SetActive(true);
                     bomb.transform.position = new Vector3(-15, -2);
                     blast.transform.position = new Vector3(-15, -2);
+                    blast.transform.eulerAngles = Vector3.zero;
+                    bomb2.transform.eulerAngles += new Vector3(0, 0, 20) * Time.deltaTime;
                     bomb2.transform.position += Vector3.left * Time.deltaTime * 8;
                 }
                 else if (attackPause > 15)
                 {
                     blast2.transform.position = bomb2.transform.position;
+                    blast2.transform.eulerAngles += new Vector3(0, 0, -30) * Time.deltaTime;
                     bomb2.SetActive(false);
                 }
                 else if (attackPause > 13.5)
@@ -184,6 +195,7 @@ public class AttackManager : MonoBehaviour
                     bomb2.SetActive(true);
                     bomb2.transform.position = new Vector3(15, -4);
                     blast2.transform.position = new Vector3(15, -4);
+                    blast2.transform.eulerAngles = Vector3.zero;
                 }
                 else if (attackPause > 12.5)
                 {
