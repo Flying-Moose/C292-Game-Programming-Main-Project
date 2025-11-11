@@ -7,6 +7,7 @@ public class AttackManager : MonoBehaviour
     public GameObject COsprite;
     public GameObject CLsprite;
     public GameObject FLsprite;
+    public GameObject radioSprite;
 
     public GameObject CObullet;
     public GameObject COsplitBullet1;
@@ -81,12 +82,16 @@ public class AttackManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (COsprite.activeSelf)
+        if (radioSprite.activeSelf)
+        {
+            playerCamera.transform.eulerAngles = Vector3.zero;
+            FLcollection.SetActive(false);
+        }
+        else if (COsprite.activeSelf)
         {
             if (COInit)
             {
                 COcollection.SetActive(true);
-                FLcollection.SetActive(false);
                 attackPause = 30;
                 CLInit = true;
                 COInit = false;
@@ -111,16 +116,12 @@ public class AttackManager : MonoBehaviour
             {
                 FLcollection.SetActive(true);
                 CLcollection.SetActive(false);
+                fire2.transform.eulerAngles = new Vector3(0, 0, 180);
                 attackPause = 50;
                 COInit = true;
                 FLInit = false;
             }
             FLAttacks();
-        } 
-        else
-        {
-            playerCamera.transform.eulerAngles = Vector3.zero;
-            FLcollection.SetActive(false);
         }
 
             void COAttacks()
@@ -219,18 +220,21 @@ public class AttackManager : MonoBehaviour
             }
             else if (attackPause > 40)
             {
+                note1.transform.eulerAngles += new Vector3(0, 0, -10) * Time.deltaTime;
                 note1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
             }
             else if (attackPause > 35)
             {
+                note2.transform.eulerAngles += new Vector3(0, 0, 10) * Time.deltaTime;
                 note2.transform.position += new Vector3(0.1f, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
             }
             else if (attackPause > 30)
             {
+                note3.transform.eulerAngles += new Vector3(0, 0, -10) * Time.deltaTime;
                 note3.transform.position += new Vector3(-0.05f, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
@@ -240,6 +244,9 @@ public class AttackManager : MonoBehaviour
                 note1.transform.position = new Vector3(0, 10);
                 note2.transform.position = new Vector3(0, 10);
                 note3.transform.position = new Vector3(0, 10);
+                note1.transform.eulerAngles = Vector3.zero;
+                note2.transform.eulerAngles = Vector3.zero;
+                note3.transform.eulerAngles = Vector3.zero;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
                 flute.transform.position += Vector3.down * Time.deltaTime * 7;
@@ -254,22 +261,28 @@ public class AttackManager : MonoBehaviour
                 stanza1.transform.position = new Vector3(20, -2);
                 stanza2.transform.position = new Vector3(31.5f, -3);
                 flute.transform.position += Vector3.down * Time.deltaTime * 7;
+                paper1.transform.eulerAngles += new Vector3(0, 0, 50) * Time.deltaTime;
                 paper1.transform.position += new Vector3(-1, -1) * Time.deltaTime * 7;
             }
             else if (attackPause > 4)
             {
+                paper1.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
                 paper1.transform.position += new Vector3(-1.5f, -1) * Time.deltaTime * 5;
                 paper2.transform.position += new Vector3(1, -1.5f) * Time.deltaTime * 5;
+                paper2.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
             }
             else if (attackPause > 1)
             {
                 flute.transform.position = new Vector3(0.1f, 10);
                 paper2.transform.position += new Vector3(1.5f, -1) * Time.deltaTime * 5;
+                paper2.transform.eulerAngles += new Vector3(0, 0, 40) * Time.deltaTime;
             }
             else if (attackPause > 0)
             {
                 paper1.transform.position = new Vector3(20, 15);
                 paper2.transform.position = new Vector3(-16, 15);
+                paper1.transform.eulerAngles = Vector3.zero;
+                paper2.transform.eulerAngles = Vector3.zero;
                 attackPause = 50;
             }
         }
@@ -282,6 +295,7 @@ public class AttackManager : MonoBehaviour
             else if (attackPause > 38)
             {
                 fan.transform.position += Vector3.down * Time.deltaTime * 7;
+                fan.transform.eulerAngles += new Vector3(0, 0, 80) * Time.deltaTime * 3;
             }
             else if (attackPause > 37.9f)
             {
@@ -290,14 +304,18 @@ public class AttackManager : MonoBehaviour
             else if (attackPause > 32)
             {
                 fan.transform.position += Vector3.up * Time.deltaTime * 7;
+                fan.transform.eulerAngles += new Vector3(0, 0, 80) * Time.deltaTime * 4;
             }
             else if (attackPause > 27.999)
             {
+                fan.SetActive(false);
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 6;
             }
             else if (attackPause > 25.5f)
             {
+                fan.SetActive(true);
                 fan.transform.position = new Vector3(-1, 20);
+                fan.transform.eulerAngles = Vector3.zero;
             }
             else if (attackPause > 25)
             {
@@ -350,6 +368,10 @@ public class AttackManager : MonoBehaviour
                 petal2.SetActive(true);
                 petal3.SetActive(true);
                 petal4.SetActive(true);
+                petal1.transform.eulerAngles += new Vector3(0, 0, -20) * Time.deltaTime * 2;
+                petal2.transform.eulerAngles += new Vector3(0, 0, 10) * Time.deltaTime * 2;
+                petal3.transform.eulerAngles += new Vector3(0, 0, 20) * Time.deltaTime * 2;
+                petal4.transform.eulerAngles += new Vector3(0, 0, -10) * Time.deltaTime * 2;
                 petal1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 3;
                 petal2.transform.position += new Vector3(-0.5f, -1.2f) * Time.deltaTime * 3;
                 petal3.transform.position += new Vector3(0.3f, -0.8f) * Time.deltaTime * 3;
@@ -357,6 +379,8 @@ public class AttackManager : MonoBehaviour
             }
             else if (attackPause > 1)
             {
+                petal1.transform.eulerAngles += new Vector3(0, 0, 10) * Time.deltaTime * 2;
+                petal3.transform.eulerAngles += new Vector3(0, 0, -20) * Time.deltaTime * 2;
                 petal1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 3;
                 petal2.transform.position += new Vector3(-0.5f, -1.2f) * Time.deltaTime * 3;
                 petal3.transform.position += new Vector3(0.3f, -0.8f) * Time.deltaTime * 3;
@@ -368,6 +392,10 @@ public class AttackManager : MonoBehaviour
                 petal2.transform.position = new Vector3(0, 15);
                 petal3.transform.position = new Vector3(0, 15);
                 petal4.transform.position = new Vector3(0, 15);
+                petal1.transform.eulerAngles = Vector3.zero;
+                petal2.transform.eulerAngles = Vector3.zero;
+                petal3.transform.eulerAngles = Vector3.zero;
+                petal4.transform.eulerAngles = Vector3.zero;
                 attackPause = 50;
             }
         }

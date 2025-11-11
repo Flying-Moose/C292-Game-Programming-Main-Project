@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class DamageTile : MonoBehaviour
@@ -12,10 +13,11 @@ public class DamageTile : MonoBehaviour
     private bool readyToCountDown;
     private bool stopDamageTile;
 
-    private int bossHealth = 15;
+    private int bossHealth = 0;
     public GameObject country;
     public GameObject classical;
     public GameObject flamenco;
+    public GameObject radio;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,8 +25,10 @@ public class DamageTile : MonoBehaviour
         damageTileNewPosition.y = 15;
         damageTile.gameObject.transform.position = damageTileNewPosition;
         readyToCountDown = true;
+        country.SetActive(false);
         classical.SetActive(false);
         flamenco.SetActive(false);
+        stopDamageTile = true;
     }
 
     // Update is called once per frame
@@ -32,7 +36,7 @@ public class DamageTile : MonoBehaviour
     {
         if (readyToCountDown)
         {
-            if (damageInbetweenTimer > 0)
+            if (damageInbetweenTimer > 0 && !stopDamageTile)
             {
                 damageInbetweenTimer -= Time.deltaTime;
             }
@@ -45,6 +49,12 @@ public class DamageTile : MonoBehaviour
                 damageTile.gameObject.transform.position = damageTileNewPosition;
                 readyToCountDown = false;
             }
+        }
+        if (bossHealth == 0 && country.activeSelf)
+        {
+            readyToCountDown = true;
+            stopDamageTile = false;
+            bossHealth = 15;
         }
     }
     private void DetectBossHealth()
@@ -61,6 +71,7 @@ public class DamageTile : MonoBehaviour
         } else if (bossHealth == 0)
         {
             flamenco.SetActive(false);
+            radio.SetActive(true);
             stopDamageTile = true;
         }
     }

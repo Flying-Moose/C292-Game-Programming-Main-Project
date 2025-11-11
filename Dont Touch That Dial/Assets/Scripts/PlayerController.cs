@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     private float invulTimer = 0;
     private float health = 3;
 
+    public GameObject radio;
+    public GameObject country;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -94,6 +97,11 @@ public class PlayerController : MonoBehaviour
         if (invulTimer > 0)
         {
             invulTimer -= Time.deltaTime;
+        }
+        if ((player.transform.position == Vector3.zero) && radio.activeSelf && (Input.GetKeyDown(KeyCode.UpArrow) || (Input.GetKeyDown(KeyCode.W))))
+        {
+            country.SetActive(true);
+            radio.SetActive(false);
         }
     }
     public void BarrierCheck()
