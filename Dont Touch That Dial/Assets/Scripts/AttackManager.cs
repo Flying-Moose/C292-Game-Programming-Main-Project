@@ -85,7 +85,14 @@ public class AttackManager : MonoBehaviour
         if (radioSprite.activeSelf)
         {
             playerCamera.transform.eulerAngles = Vector3.zero;
+            COcollection.SetActive(true);
+            CLcollection.SetActive(true);
+            FLcollection.SetActive(true);
+            ResetPositions();
+            COcollection.SetActive(false);
+            CLcollection.SetActive(false);
             FLcollection.SetActive(false);
+            
         }
         else if (COsprite.activeSelf)
         {
@@ -470,5 +477,34 @@ public class AttackManager : MonoBehaviour
         petal2.transform.parent = FLcollection.transform;
         petal3.transform.parent = FLcollection.transform;
         petal4.transform.parent = FLcollection.transform;
+    }
+    void ResetPositions()
+    {
+        bullet1.transform.position = new Vector3(-2, 11);
+        bullet2.transform.position = new Vector3(0, 10);
+        bullet3.transform.position = new Vector3(2, 11);
+        splitBullet1.transform.position = new Vector3(0, 10);
+        splitBullet2.transform.position = new Vector3(0, 10);
+        swipe.transform.position = new Vector3(0, 10);
+        bomb.transform.position = new Vector3(-15, -2);
+        bomb2.transform.position = new Vector3(15, -4);
+        blast.transform.position = new Vector3(-15, -2);
+        blast2.transform.position = new Vector3(15, -4);
+        banjoSwipe.transform.position = new Vector3(0, 10);
+        stanza1.transform.position = new Vector3(20, -2);
+        stanza2.transform.position = new Vector3(31.5f, -3);
+        note1.transform.position = new Vector3(0, 10);
+        note2.transform.position = new Vector3(0, 10);
+        note3.transform.position = new Vector3(0, 10);
+        flute.transform.position = new Vector3(0.1f, 10);
+        paper1.transform.position = new Vector3(20, 15);
+        paper2.transform.position = new Vector3(-16, 15);
+        fan.transform.position = new Vector3(-1, 20);
+        fire1.transform.position = new Vector3(20, -1);
+        fire2.transform.position = new Vector3(-20, -3);
+        petal1.transform.position = new Vector3(0, 15);
+        petal2.transform.position = new Vector3(0, 15);
+        petal3.transform.position = new Vector3(0, 15);
+        petal4.transform.position = new Vector3(0, 15);
     }
 }
