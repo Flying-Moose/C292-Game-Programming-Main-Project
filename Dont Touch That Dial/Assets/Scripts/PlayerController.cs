@@ -18,6 +18,12 @@ public class PlayerController : MonoBehaviour
     private float moveTimer;
     private float invulTimer = 0;
     private float health = 3;
+    public SpriteRenderer spriteRenderer;
+    public Sprite playerSprite;
+    public Sprite upPlayerSprite;
+    public Sprite downPlayerSprite;
+    public Sprite LRPlayerSprite;
+
 
     public GameObject radio;
     public GameObject country;
@@ -36,6 +42,7 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && !disableLeft && !moving){
             currPlayerPosition.x -= 1;
             moveDist.x -= 1;
+            spriteRenderer.sprite = LRPlayerSprite;
         }
         if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && !disableRight && !moving)
         {
@@ -46,11 +53,13 @@ public class PlayerController : MonoBehaviour
         {
             currPlayerPosition.y += 1;
             moveDist.y += 1;
+            spriteRenderer.sprite = upPlayerSprite;
         }
         if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && !disableDown && !moving)
         {
             currPlayerPosition.y -= 1;
             moveDist.y -= 1;
+            spriteRenderer.sprite = downPlayerSprite;
         }
 
         if (player.gameObject.transform.position != currPlayerPosition)
@@ -62,6 +71,7 @@ public class PlayerController : MonoBehaviour
         {
             moveDist = Vector3.zero;
             moving = false;
+            spriteRenderer.sprite = playerSprite;
         }
 
         void Moving(Vector3 desiredMovement)
