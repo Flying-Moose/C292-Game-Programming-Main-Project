@@ -23,10 +23,12 @@ public class PlayerController : MonoBehaviour
     public Sprite upPlayerSprite;
     public Sprite downPlayerSprite;
     public Sprite LRPlayerSprite;
-
+    public bool spriteFlip;
 
     public GameObject radio;
     public GameObject country;
+    public GameObject classical;
+    public GameObject flamenco;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,12 +44,15 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && !disableLeft && !moving){
             currPlayerPosition.x -= 1;
             moveDist.x -= 1;
+            spriteRenderer.flipX = false;
             spriteRenderer.sprite = LRPlayerSprite;
         }
         if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && !disableRight && !moving)
         {
             currPlayerPosition.x += 1;
             moveDist.x += 1;
+            spriteRenderer.flipX = true;
+            spriteRenderer.sprite = LRPlayerSprite;
         }
         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && !disableUp && !moving)
         {
@@ -72,6 +77,18 @@ public class PlayerController : MonoBehaviour
             moveDist = Vector3.zero;
             moving = false;
             spriteRenderer.sprite = playerSprite;
+        }
+
+        if (health <= 0)
+        {
+            country.SetActive(false);
+            classical.SetActive(false);
+            flamenco.SetActive(false);
+            radio.SetActive(true);
+        }
+        if (radio.activeSelf)
+        {
+            health = 3;
         }
 
         void Moving(Vector3 desiredMovement)

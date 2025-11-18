@@ -56,6 +56,11 @@ public class DamageTile : MonoBehaviour
             stopDamageTile = false;
             bossHealth = 15;
         }
+        if (radio.activeSelf)
+        {
+            stopDamageTile = true;
+            bossHealth = 0;
+        }
     }
     private void DetectBossHealth()
     {

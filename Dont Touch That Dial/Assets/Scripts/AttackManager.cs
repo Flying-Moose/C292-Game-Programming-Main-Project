@@ -92,7 +92,7 @@ public class AttackManager : MonoBehaviour
             COcollection.SetActive(false);
             CLcollection.SetActive(false);
             FLcollection.SetActive(false);
-            
+            COInit = true;
         }
         else if (COsprite.activeSelf)
         {

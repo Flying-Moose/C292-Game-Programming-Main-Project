@@ -3827,8 +3827,11 @@ MonoBehaviour:
   upPlayerSprite: {fileID: 21300000, guid: 249f0a7e1c0a99a4b984330521c3b8ea, type: 3}
   downPlayerSprite: {fileID: 21300000, guid: ecb797f6f7b933b49b889ec75fa38b2b, type: 3}
   LRPlayerSprite: {fileID: 21300000, guid: 8d8fbd56601738f47a7ec34dfc7b54a5, type: 3}
+  spriteFlip: 0
   radio: {fileID: 46680272}
   country: {fileID: 1817115788}
+  classical: {fileID: 2114564106}
+  flamenco: {fileID: 329582209}
 --- !u!212 &1442560982
 SpriteRenderer:
   m_ObjectHideFlags: 0
