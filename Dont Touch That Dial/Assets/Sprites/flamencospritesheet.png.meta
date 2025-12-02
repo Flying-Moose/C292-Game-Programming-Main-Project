@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: 01847af902d316347b445b31bd55d98f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6713405039088035418
+    second: flamencospritesheet_0
+  - first:
+      213: 5186919013365175483
+    second: flamencospritesheet_1
+  - first:
+      213: -6531677124729280093
+    second: flamencospritesheet_2
+  - first:
+      213: -834535099188251268
+    second: flamencospritesheet_3
+  - first:
+      213: 7391211001055105422
+    second: flamencospritesheet_4
+  - first:
+      213: 6379958096254343842
+    second: flamencospritesheet_5
+  - first:
+      213: -1147088781601731923
+    second: flamencospritesheet_6
+  - first:
+      213: 6130433792302600612
+    second: flamencospritesheet_7
+  - first:
+      213: -7695208325978568861
+    second: flamencospritesheet_8
+  - first:
+      213: 2916134446940253334
+    second: flamencospritesheet_9
+  - first:
+      213: -198648340687026191
+    second: flamencospritesheet_10
+  - first:
+      213: 3808034785888035493
+    second: flamencospritesheet_11
+  - first:
+      213: -7451444750617928222
+    second: flamencospritesheet_12
+  - first:
+      213: -3672287631156962408
+    second: flamencospritesheet_13
+  - first:
+      213: 2496470359149418536
+    second: flamencospritesheet_14
+  - first:
+      213: -7514017573350648985
+    second: flamencospritesheet_15
+  - first:
+      213: 4426455470330200495
+    second: flamencospritesheet_16
+  - first:
+      213: 5552423964325515576
+    second: flamencospritesheet_17
+  - first:
+      213: 1600922496638258221
+    second: flamencospritesheet_18
+  - first:
+      213: 8271057582319421994
+    second: flamencospritesheet_19
+  - first:
+      213: 8936662654407311710
+    second: flamencospritesheet_20
+  - first:
+      213: 8786872196787816720
+    second: flamencospritesheet_21
+  - first:
+      213: 6552628189685567503
+    second: flamencospritesheet_22
+  - first:
+      213: 6800063480101650518
+    second: flamencospritesheet_23
+  - first:
+      213: -5965375835701480276
+    second: flamencospritesheet_24
+  - first:
+      213: -5693969350293003100
+    second: flamencospritesheet_25
+  - first:
+      213: 2422747405948605053
+    second: flamencospritesheet_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flamencospritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a917d3afa135d2a0800000000000000
+      internalID: -6713405039088035418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamencospritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4d9567c53abf740800000000000000
+      internalID: 5186919013365175483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamencospritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a967f8e242da55a0800000000000000
+      internalID: -6531677124729280093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dd327aebe6a71264cbee9beb442216c9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":800.0,"y":800.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      flamencospritesheet_0: -6713405039088035418
+      flamencospritesheet_1: 5186919013365175483
+      flamencospritesheet_2: -6531677124729280093
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

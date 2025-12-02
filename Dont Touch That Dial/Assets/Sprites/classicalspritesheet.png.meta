@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 89267561eefcb9446b0181c3bd0fd5ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5623600381407934655
+    second: classicalspritesheet_0
+  - first:
+      213: 5859250411479186649
+    second: classicalspritesheet_1
+  - first:
+      213: -3187926533684821274
+    second: classicalspritesheet_2
+  - first:
+      213: -5494360611709868596
+    second: classicalspritesheet_3
+  - first:
+      213: 5557741362738255206
+    second: classicalspritesheet_4
+  - first:
+      213: 6279278242113668615
+    second: classicalspritesheet_5
+  - first:
+      213: 1529943628319109381
+    second: classicalspritesheet_6
+  - first:
+      213: -2064493341512304127
+    second: classicalspritesheet_7
+  - first:
+      213: -2403292276600532812
+    second: classicalspritesheet_8
+  - first:
+      213: 2621563912401317398
+    second: classicalspritesheet_9
+  - first:
+      213: -7166695100887986597
+    second: classicalspritesheet_10
+  - first:
+      213: -2174228380768704246
+    second: classicalspritesheet_11
+  - first:
+      213: -3373514742383586932
+    second: classicalspritesheet_12
+  - first:
+      213: 2952720557184302690
+    second: classicalspritesheet_13
+  - first:
+      213: 8214846908379382129
+    second: classicalspritesheet_14
+  - first:
+      213: 6990882559304979601
+    second: classicalspritesheet_15
+  - first:
+      213: 4590444506097937166
+    second: classicalspritesheet_16
+  - first:
+      213: 8995182940417859972
+    second: classicalspritesheet_17
+  - first:
+      213: 6429900864793093719
+    second: classicalspritesheet_18
+  - first:
+      213: 7387861385764949703
+    second: classicalspritesheet_19
+  - first:
+      213: -726388093777511431
+    second: classicalspritesheet_20
+  - first:
+      213: -2008308491706426947
+    second: classicalspritesheet_21
+  - first:
+      213: 219846969457546771
+    second: classicalspritesheet_22
+  - first:
+      213: 6603504908944122430
+    second: classicalspritesheet_23
+  - first:
+      213: -5027899412882680757
+    second: classicalspritesheet_24
+  - first:
+      213: -4194747389351985372
+    second: classicalspritesheet_25
+  - first:
+      213: 192156302775920695
+    second: classicalspritesheet_26
+  - first:
+      213: 2828662305313741887
+    second: classicalspritesheet_27
+  - first:
+      213: -1810647519775327357
+    second: classicalspritesheet_28
+  - first:
+      213: 4497494700956507845
+    second: classicalspritesheet_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: classicalspritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8329470ca0b0e40800000000000000
+      internalID: 5623600381407934655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalspritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc3742a43d305150800000000000000
+      internalID: 5859250411479186649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalspritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e28cad35b532c3d0800000000000000
+      internalID: -3187926533684821274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f50bb2cc3233db14dbb5e417b0e7837b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":800.0,"y":800.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      classicalspritesheet_0: 5623600381407934655
+      classicalspritesheet_1: 5859250411479186649
+      classicalspritesheet_2: -3187926533684821274
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
