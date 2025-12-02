@@ -1,0 +1,332 @@
+fileFormatVersion: 2
+guid: ff9dfd3628608974297c0f50f944196f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1068183073925209550
+    second: countryspritesheet_0
+  - first:
+      213: 1089039902892989321
+    second: countryspritesheet_1
+  - first:
+      213: -3582266281065442272
+    second: countryspritesheet_2
+  - first:
+      213: -8696582989812387730
+    second: countryspritesheet_3
+  - first:
+      213: 3098084774958697547
+    second: countryspritesheet_4
+  - first:
+      213: -5759010237536854766
+    second: countryspritesheet_5
+  - first:
+      213: -8869562557864294686
+    second: countryspritesheet_6
+  - first:
+      213: 8348549636094002646
+    second: countryspritesheet_7
+  - first:
+      213: 3309813401427664950
+    second: countryspritesheet_8
+  - first:
+      213: -3776370887919091348
+    second: countryspritesheet_9
+  - first:
+      213: 8341018105008959948
+    second: countryspritesheet_10
+  - first:
+      213: 4906907599443322174
+    second: countryspritesheet_11
+  - first:
+      213: -1045713922620617092
+    second: countryspritesheet_12
+  - first:
+      213: 1620469908693230092
+    second: countryspritesheet_13
+  - first:
+      213: 3809304263359073330
+    second: countryspritesheet_14
+  - first:
+      213: -4334479957519771278
+    second: countryspritesheet_15
+  - first:
+      213: -714699352149250860
+    second: countryspritesheet_16
+  - first:
+      213: -2238124499510007660
+    second: countryspritesheet_17
+  - first:
+      213: 3701443468256755505
+    second: countryspritesheet_18
+  - first:
+      213: 766937475531179853
+    second: countryspritesheet_19
+  - first:
+      213: -2479755027415702836
+    second: countryspritesheet_20
+  - first:
+      213: 7831359557027505679
+    second: countryspritesheet_21
+  - first:
+      213: -3245573134824379954
+    second: countryspritesheet_22
+  - first:
+      213: 8233318079634864523
+    second: countryspritesheet_23
+  - first:
+      213: 8647980207065485396
+    second: countryspritesheet_24
+  - first:
+      213: -6469547343459225207
+    second: countryspritesheet_25
+  - first:
+      213: 457091883200635174
+    second: countryspritesheet_26
+  - first:
+      213: 723333854518719056
+    second: countryspritesheet_27
+  - first:
+      213: 4036568379472690809
+    second: countryspritesheet_28
+  - first:
+      213: 3524112712239573333
+    second: countryspritesheet_29
+  - first:
+      213: -8976133639544450043
+    second: countryspritesheet_30
+  - first:
+      213: 4686015024897623212
+    second: countryspritesheet_31
+  - first:
+      213: 5998571973975567697
+    second: countryspritesheet_32
+  - first:
+      213: -8404987296742560280
+    second: countryspritesheet_33
+  - first:
+      213: 7064104924531474713
+    second: countryspritesheet_34
+  - first:
+      213: -593606498835316262
+    second: countryspritesheet_35
+  - first:
+      213: -6595192686571009034
+    second: countryspritesheet_36
+  - first:
+      213: -6526235797005821360
+    second: countryspritesheet_37
+  - first:
+      213: -9221773928379950966
+    second: countryspritesheet_38
+  - first:
+      213: 5984176653620718738
+    second: countryspritesheet_39
+  - first:
+      213: 218864789014368151
+    second: countryspritesheet_40
+  - first:
+      213: -8042374937576170844
+    second: countryspritesheet_41
+  - first:
+      213: -4736299177731934436
+    second: countryspritesheet_42
+  - first:
+      213: 6980942314109219298
+    second: countryspritesheet_43
+  - first:
+      213: -840669392986190133
+    second: countryspritesheet_44
+  - first:
+      213: -6399375104401741125
+    second: countryspritesheet_45
+  - first:
+      213: -5356008322347447574
+    second: countryspritesheet_46
+  - first:
+      213: 2637990798319577495
+    second: countryspritesheet_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: countryspritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd9564a8d2f2de00800000000000000
+      internalID: 1068183073925209550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryspritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b992e850c0d1f00800000000000000
+      internalID: 1089039902892989321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryspritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0241c3a0ccb394ec0800000000000000
+      internalID: -3582266281065442272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1de602ad44a107441b50a11b2dd51ed2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":800.0,"y":800.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      countryspritesheet_0: 1068183073925209550
+      countryspritesheet_1: 1089039902892989321
+      countryspritesheet_2: -3582266281065442272
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
