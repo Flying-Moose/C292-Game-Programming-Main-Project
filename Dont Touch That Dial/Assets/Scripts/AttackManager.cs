@@ -8,6 +8,7 @@ public class AttackManager : MonoBehaviour
     public GameObject CLsprite;
     public GameObject FLsprite;
     public GameObject radioSprite;
+    public GameObject staticSprite;
 
     public GameObject CObullet;
     public GameObject COsplitBullet1;
@@ -99,7 +100,7 @@ public class AttackManager : MonoBehaviour
             if (COInit)
             {
                 COcollection.SetActive(true);
-                attackPause = 30;
+                attackPause = 32;
                 CLInit = true;
                 COInit = false;
             }
@@ -111,7 +112,7 @@ public class AttackManager : MonoBehaviour
             {
                 CLcollection.SetActive(true);
                 COcollection.SetActive(false);
-                attackPause = 50;
+                attackPause = 52;
                 FLInit = true;
                 CLInit = false;
             }
@@ -124,17 +125,22 @@ public class AttackManager : MonoBehaviour
                 FLcollection.SetActive(true);
                 CLcollection.SetActive(false);
                 fire2.transform.eulerAngles = new Vector3(0, 0, 180);
-                attackPause = 50;
+                attackPause = 52;
                 COInit = true;
                 FLInit = false;
             }
             FLAttacks();
         }
-
             void COAttacks()
             {
-                if (attackPause > 26.4)
+                if (attackPause > 30)
                 {
+                    staticSprite.transform.position = new Vector3(0, 3.1f);
+                }
+                else if (attackPause > 26.4)
+                {
+                    COsprite.transform.position = new Vector3(0, 3.7f);
+                    staticSprite.transform.position = new Vector3(0, 20);
                     OneRandom(0, -4);
                     bomb.transform.position = new Vector3(-15, randInt);
                     bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
@@ -220,8 +226,14 @@ public class AttackManager : MonoBehaviour
             }
         void CLAttacks()
         {
-            if (attackPause > 44)
+            if (attackPause > 50)
             {
+                staticSprite.transform.position = new Vector3(0, 3.1f);
+            }
+            else if (attackPause > 44)
+            {
+                CLsprite.transform.position = new Vector3(0, 3.7f);
+                staticSprite.transform.position = new Vector3(0, 20);
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
             }
@@ -281,6 +293,7 @@ public class AttackManager : MonoBehaviour
             else if (attackPause > 1)
             {
                 flute.transform.position = new Vector3(0.1f, 10);
+                flute.transform.eulerAngles = Vector3.zero;
                 paper2.transform.position += new Vector3(1.5f, -1) * Time.deltaTime * 5;
                 paper2.transform.eulerAngles += new Vector3(0, 0, 40) * Time.deltaTime;
             }
@@ -295,8 +308,14 @@ public class AttackManager : MonoBehaviour
         }
         void FLAttacks()
         {
-            if (attackPause > 46.001)
+            if (attackPause > 50)
             {
+                staticSprite.transform.position = new Vector3(0, 3.1f);
+            }
+            else if (attackPause > 46.001)
+            {
+                FLsprite.transform.position = new Vector3(0, 3.7f);
+                staticSprite.transform.position = new Vector3(0, 20);
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 6;
             } 
             else if (attackPause > 38)
@@ -506,5 +525,8 @@ public class AttackManager : MonoBehaviour
         petal2.transform.position = new Vector3(0, 15);
         petal3.transform.position = new Vector3(0, 15);
         petal4.transform.position = new Vector3(0, 15);
+        COsprite.transform.position = new Vector3(0, 20);
+        CLsprite.transform.position = new Vector3(0, 20);
+        FLsprite.transform.position = new Vector3(0, 20);
     }
 }

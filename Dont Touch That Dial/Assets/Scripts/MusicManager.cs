@@ -10,53 +10,67 @@ public class MusicManager : MonoBehaviour
     public GameObject countrySprite;
     public GameObject classicalSprite;
     public GameObject flamencoSprite;
+    public GameObject staticSprite;
 
-    private bool stopFromContinouslyPlaying;
+    public float inbetweenTimer = 1.5f;
+    private bool timerInitiater;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        country.volume = 0;
-        waltz.volume = 0;
-        tango.volume = 0;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (staticSprite.transform.position == new Vector3(0, 3.1f) && timerInitiater)
+        {
+            inbetweenTimer = 1;
+            timerInitiater = false;
+            StopTracks();
+        }
         if (radioSprite.activeSelf)
         {
             StopTracks();
-            stopFromContinouslyPlaying = false;
-            country.volume = 0;
-            waltz.volume = 0;
-            tango.volume = 0;
+            timerInitiater = true;
         }
         else if (countrySprite.activeSelf)
         {
-            if (!stopFromContinouslyPlaying)
+            if (inbetweenTimer > 0)
             {
-                PlayTracks();
+                inbetweenTimer -= Time.deltaTime;
+            } 
+            else if (!country.isPlaying && !timerInitiater)
+            {
+                country.Play();
+                timerInitiater = true;
             }
-            country.volume = 1;
         }
         else if (classicalSprite.activeSelf)
         {
-            country.volume = 0;
-            waltz.volume = 1;
+            if (inbetweenTimer > 0)
+            {
+                inbetweenTimer -= Time.deltaTime;
+            }
+            else if (!waltz.isPlaying && !timerInitiater)
+            {
+                waltz.Play();
+                timerInitiater = true;
+            }
         }
         else if (flamencoSprite.activeSelf)
         {
-            waltz.volume = 0;
-            tango.volume = 1;
+            if (inbetweenTimer > 0)
+            {
+                inbetweenTimer -= Time.deltaTime;
+            }
+            else if (!tango.isPlaying && !timerInitiater)
+            {
+                tango.Play();
+                timerInitiater = true;
+            }
         }
-    }
-    void PlayTracks()
-    {
-        country.Play();
-        waltz.Play();
-        tango.Play();
-        stopFromContinouslyPlaying = true;
     }
     void StopTracks()
     {
