@@ -6,7 +6,7 @@ public class DamageTile : MonoBehaviour
 {
 
     public GameObject damageTile;
-    public float damageInbetweenTimer = 5;
+    public float damageInbetweenTimer = 6;
     private int randX;
     private int randY;
     private Vector2 damageTileNewPosition;
@@ -89,7 +89,7 @@ public class DamageTile : MonoBehaviour
             Debug.Log("Damaged the boss!");
             bossHealth -= 1;
             DetectBossHealth();
-            damageInbetweenTimer = 5;
+            damageInbetweenTimer = 6;
             readyToCountDown = true;
         }
     }

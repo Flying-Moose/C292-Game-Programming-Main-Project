@@ -5,6 +5,7 @@ public class MusicManager : MonoBehaviour
     public AudioSource country;
     public AudioSource waltz;
     public AudioSource tango;
+    public AudioSource staticSound;
 
     public GameObject radioSprite;
     public GameObject countrySprite;
@@ -26,6 +27,10 @@ public class MusicManager : MonoBehaviour
     {
         if (staticSprite.transform.position == new Vector3(0, 3.1f) && timerInitiater)
         {
+            if (!staticSound.isPlaying)
+            {
+                staticSound.Play();
+            }
             inbetweenTimer = 1;
             timerInitiater = false;
             StopTracks();
@@ -44,6 +49,7 @@ public class MusicManager : MonoBehaviour
             else if (!country.isPlaying && !timerInitiater)
             {
                 country.Play();
+                staticSound.Stop();
                 timerInitiater = true;
             }
         }
@@ -56,6 +62,7 @@ public class MusicManager : MonoBehaviour
             else if (!waltz.isPlaying && !timerInitiater)
             {
                 waltz.Play();
+                staticSound.Stop();
                 timerInitiater = true;
             }
         }
@@ -68,6 +75,7 @@ public class MusicManager : MonoBehaviour
             else if (!tango.isPlaying && !timerInitiater)
             {
                 tango.Play();
+                staticSound.Stop();
                 timerInitiater = true;
             }
         }
