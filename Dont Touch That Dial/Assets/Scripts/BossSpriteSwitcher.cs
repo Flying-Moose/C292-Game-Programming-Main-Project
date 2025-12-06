@@ -87,16 +87,11 @@ public class BossSpriteSwitcher : MonoBehaviour
             {
                 countrySpriteRenderer.sprite = countryShoot2;
             }
-            else if (inbetweenTimer > 29.2)
-            {
-                country.transform.position = new Vector3(0, 3.7f);
-                countrySingle.transform.position = new Vector3(0, 20);
-                countrySpriteRenderer.sprite = countryIdle;
-            }
             else if (inbetweenTimer > 28)
             {
-                country.transform.position += Vector3.left * Time.deltaTime * 9;
-                countrySingle.transform.position += Vector3.left * Time.deltaTime * 9;
+                countrySpriteRenderer.sprite = countryIdle;
+                country.transform.position += Vector3.left * Time.deltaTime * 7;
+                countrySingle.transform.position += Vector3.left * Time.deltaTime * 7;
             }
             else if (inbetweenTimer > 26.3)
             {
@@ -108,16 +103,29 @@ public class BossSpriteSwitcher : MonoBehaviour
                 country.transform.position = new Vector3(0, 20);
                 countrySingle.transform.position = new Vector3(0, 3.7f);
             }
-            else if (inbetweenTimer > 20)
+            else if (inbetweenTimer > 16)
             {
                 country.transform.position = new Vector3(0, 3.7f);
                 countrySingle.transform.position = new Vector3(0, 20);
             }
-            else if (inbetweenTimer > 17)
+            else if (inbetweenTimer > 13.5)
             {
                 countrySpriteRenderer.sprite = countryBanjo1;
                 country.transform.position = new Vector3(0, 20);
                 countrySingle.transform.position = new Vector3(0, 3.7f);
+            }
+            else if (inbetweenTimer > 12.5)
+            {
+                countrySpriteRenderer.sprite = countryBanjo2;
+            }
+            else if (inbetweenTimer > 11.5)
+            {
+                country.transform.position = new Vector3(0, 3.7f);
+                countrySingle.transform.position = new Vector3(0, 20);
+            }
+            else if (inbetweenTimer > 10)
+            {
+                inbetweenTimer = 30;
             }
         }
         void ClassicalSpriteMovement()
