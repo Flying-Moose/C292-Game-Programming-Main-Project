@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 7abab85aaa46fd04aabab9469e6a5242
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1927613015280003566
+    second: countryshootsprite2_0
+  - first:
+      213: -1901611315962656588
+    second: countryshootsprite2_1
+  - first:
+      213: -5896818467337473721
+    second: countryshootsprite2_2
+  - first:
+      213: -4496641802129594317
+    second: countryshootsprite2_3
+  - first:
+      213: -6787221918797788018
+    second: countryshootsprite2_4
+  - first:
+      213: 5966255126895083155
+    second: countryshootsprite2_5
+  - first:
+      213: 6825117921893806896
+    second: countryshootsprite2_6
+  - first:
+      213: -6384915360990043985
+    second: countryshootsprite2_7
+  - first:
+      213: -7252547324288527323
+    second: countryshootsprite2_8
+  - first:
+      213: -4226050339930121113
+    second: countryshootsprite2_9
+  - first:
+      213: 1840077768430356388
+    second: countryshootsprite2_10
+  - first:
+      213: 6610437142890678605
+    second: countryshootsprite2_11
+  - first:
+      213: -5344274393196313670
+    second: countryshootsprite2_12
+  - first:
+      213: 1961034966871250373
+    second: countryshootsprite2_13
+  - first:
+      213: 101638304500048929
+    second: countryshootsprite2_14
+  - first:
+      213: 7709332958437082398
+    second: countryshootsprite2_15
+  - first:
+      213: 7758020598356653099
+    second: countryshootsprite2_16
+  - first:
+      213: 435936045573744352
+    second: countryshootsprite2_17
+  - first:
+      213: -8079302569341153023
+    second: countryshootsprite2_18
+  - first:
+      213: -7638600376405524162
+    second: countryshootsprite2_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: countryshootsprite2_0
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 779
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216d0dfec2ebf35e0800000000000000
+      internalID: -1927613015280003566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_1
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 727
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8ce23559e1c95e0800000000000000
+      internalID: -1901611315962656588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_2
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 727
+        width: 6
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 741f26db8da4a2ea0800000000000000
+      internalID: -5896818467337473721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_3
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 731
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338a4edea18b891c0800000000000000
+      internalID: -4496641802129594317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_4
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 639
+        width: 114
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8c005600a1fec1a0800000000000000
+      internalID: -6787221918797788018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_5
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 655
+        width: 74
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e3fe56d656cc250800000000000000
+      internalID: 5966255126895083155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_6
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 683
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033f1a4c690b7be50800000000000000
+      internalID: 6825117921893806896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_7
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 675
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0e043de493467a0800000000000000
+      internalID: -6384915360990043985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_8
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 591
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524921b52a6c95b90800000000000000
+      internalID: -7252547324288527323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_9
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 615
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76cdb8d3b9d0a55c0800000000000000
+      internalID: -4226050339930121113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_10
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 627
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a782623bf4498910800000000000000
+      internalID: 1840077768430356388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_11
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 571
+        width: 70
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d490c00de8dfcbb50800000000000000
+      internalID: 6610437142890678605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_12
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 619
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3415b21c255d5b0800000000000000
+      internalID: -5344274393196313670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_13
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 607
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c51b7099eef63b10800000000000000
+      internalID: 1961034966871250373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_14
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 231
+        width: 122
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1246c4bdf77196100800000000000000
+      internalID: 101638304500048929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_15
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 163
+        width: 338
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e158adada7d0dfa60800000000000000
+      internalID: 7709332958437082398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 111
+        width: 86
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24363561a60aab60800000000000000
+      internalID: 7758020598356653099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_17
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 147
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e626351681cc0600800000000000000
+      internalID: 435936045573744352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_18
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 107
+        width: 114
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10115818e1d80ef80800000000000000
+      internalID: -8079302569341153023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countryshootsprite2_19
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 147
+        width: 62
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e310f2fbd6d3ef590800000000000000
+      internalID: -7638600376405524162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      countryshootsprite2_0: -1927613015280003566
+      countryshootsprite2_1: -1901611315962656588
+      countryshootsprite2_10: 1840077768430356388
+      countryshootsprite2_11: 6610437142890678605
+      countryshootsprite2_12: -5344274393196313670
+      countryshootsprite2_13: 1961034966871250373
+      countryshootsprite2_14: 101638304500048929
+      countryshootsprite2_15: 7709332958437082398
+      countryshootsprite2_16: 7758020598356653099
+      countryshootsprite2_17: 435936045573744352
+      countryshootsprite2_18: -8079302569341153023
+      countryshootsprite2_19: -7638600376405524162
+      countryshootsprite2_2: -5896818467337473721
+      countryshootsprite2_3: -4496641802129594317
+      countryshootsprite2_4: -6787221918797788018
+      countryshootsprite2_5: 5966255126895083155
+      countryshootsprite2_6: 6825117921893806896
+      countryshootsprite2_7: -6384915360990043985
+      countryshootsprite2_8: -7252547324288527323
+      countryshootsprite2_9: -4226050339930121113
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

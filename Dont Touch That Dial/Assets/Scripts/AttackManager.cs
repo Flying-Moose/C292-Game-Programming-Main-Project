@@ -139,7 +139,6 @@ public class AttackManager : MonoBehaviour
                 }
                 else if (attackPause > 26.4)
                 {
-                    COsprite.transform.position = new Vector3(0, 3.7f);
                     staticSprite.transform.position = new Vector3(0, 20);
                     OneRandom(0, -4);
                     bomb.transform.position = new Vector3(-15, randInt);

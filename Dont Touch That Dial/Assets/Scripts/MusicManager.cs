@@ -13,7 +13,7 @@ public class MusicManager : MonoBehaviour
     public GameObject flamencoSprite;
     public GameObject staticSprite;
 
-    public float inbetweenTimer = 1.5f;
+    public float inbetweenTimer = 1;
     private bool timerInitiater;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

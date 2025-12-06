@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: ea9c011e77f5a4f4f9488e68171b6c58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5717365129768305935
+    second: countrybanjoswingsprite1_0
+  - first:
+      213: 3679932754700167322
+    second: countrybanjoswingsprite1_1
+  - first:
+      213: -3923301008773004918
+    second: countrybanjoswingsprite1_2
+  - first:
+      213: 4169746507218075007
+    second: countrybanjoswingsprite1_3
+  - first:
+      213: -1639321312639180692
+    second: countrybanjoswingsprite1_4
+  - first:
+      213: -1841493088124025749
+    second: countrybanjoswingsprite1_5
+  - first:
+      213: -351097818902678487
+    second: countrybanjoswingsprite1_6
+  - first:
+      213: -7816229716698852101
+    second: countrybanjoswingsprite1_7
+  - first:
+      213: -7863677738129224087
+    second: countrybanjoswingsprite1_8
+  - first:
+      213: -7365281971357105733
+    second: countrybanjoswingsprite1_9
+  - first:
+      213: -3505277225859989384
+    second: countrybanjoswingsprite1_10
+  - first:
+      213: -5078144582371840887
+    second: countrybanjoswingsprite1_11
+  - first:
+      213: 9048321457016281477
+    second: countrybanjoswingsprite1_12
+  - first:
+      213: 3426191775465631690
+    second: countrybanjoswingsprite1_13
+  - first:
+      213: -4511123067116012758
+    second: countrybanjoswingsprite1_14
+  - first:
+      213: -7078904886077163932
+    second: countrybanjoswingsprite1_15
+  - first:
+      213: 4171715844314534414
+    second: countrybanjoswingsprite1_16
+  - first:
+      213: -1772698830766757652
+    second: countrybanjoswingsprite1_17
+  - first:
+      213: 5715587422299864701
+    second: countrybanjoswingsprite1_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_0
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 591
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa74f4d4b6d7a0b0800000000000000
+      internalID: -5717365129768305935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 631
+        width: 122
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a986a31e75fb11330800000000000000
+      internalID: 3679932754700167322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_2
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 619
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a814721e482ad89c0800000000000000
+      internalID: -3923301008773004918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 583
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7db8262b5aedd930800000000000000
+      internalID: 4169746507218075007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 591
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c602a6f93f5ff39e0800000000000000
+      internalID: -1639321312639180692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_5
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 607
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64c7020bc3b176e0800000000000000
+      internalID: -1841493088124025749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 563
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92434e6d466a02bf0800000000000000
+      internalID: -351097818902678487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_7
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 535
+        width: 74
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4105d1c7c278390800000000000000
+      internalID: -7816229716698852101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_8
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 547
+        width: 46
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e09aeb2ca9ed290800000000000000
+      internalID: -7863677738129224087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_9
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 567
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb1cbaae11349c990800000000000000
+      internalID: -7365281971357105733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_10
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 559
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87049515fe0ca5fc0800000000000000
+      internalID: -3505277225859989384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_11
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 491
+        width: 158
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ce6a1586ec689b0800000000000000
+      internalID: -5078144582371840887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_12
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 227
+        width: 190
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5891003dc68129d70800000000000000
+      internalID: 9048321457016281477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_13
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 163
+        width: 206
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf6efc54474c8f20800000000000000
+      internalID: 3426191775465631690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_14
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 215
+        width: 62
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2bba7ea8754561c0800000000000000
+      internalID: -4511123067116012758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_15
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 111
+        width: 86
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 466f792038da2cd90800000000000000
+      internalID: -7078904886077163932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_16
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 147
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e029c3c2579e4e930800000000000000
+      internalID: 4171715844314534414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_17
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 107
+        width: 114
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce8a56a3ecb1667e0800000000000000
+      internalID: -1772698830766757652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: countrybanjoswingsprite1_18
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 147
+        width: 62
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ebfd46a78d15f40800000000000000
+      internalID: 5715587422299864701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      countrybanjoswingsprite1_0: -5717365129768305935
+      countrybanjoswingsprite1_1: 3679932754700167322
+      countrybanjoswingsprite1_10: -3505277225859989384
+      countrybanjoswingsprite1_11: -5078144582371840887
+      countrybanjoswingsprite1_12: 9048321457016281477
+      countrybanjoswingsprite1_13: 3426191775465631690
+      countrybanjoswingsprite1_14: -4511123067116012758
+      countrybanjoswingsprite1_15: -7078904886077163932
+      countrybanjoswingsprite1_16: 4171715844314534414
+      countrybanjoswingsprite1_17: -1772698830766757652
+      countrybanjoswingsprite1_18: 5715587422299864701
+      countrybanjoswingsprite1_2: -3923301008773004918
+      countrybanjoswingsprite1_3: 4169746507218075007
+      countrybanjoswingsprite1_4: -1639321312639180692
+      countrybanjoswingsprite1_5: -1841493088124025749
+      countrybanjoswingsprite1_6: -351097818902678487
+      countrybanjoswingsprite1_7: -7816229716698852101
+      countrybanjoswingsprite1_8: -7863677738129224087
+      countrybanjoswingsprite1_9: -7365281971357105733
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
