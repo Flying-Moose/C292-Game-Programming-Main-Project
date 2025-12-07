@@ -24,11 +24,20 @@ public class BossSpriteSwitcher : MonoBehaviour
     public Sprite countryBanjo1;
     public Sprite countryBanjo2;
 
+    public SpriteRenderer classicalSpriteRenderer;
+    public Sprite classicalIdle;
+    public Sprite classicalThrow1;
+    public Sprite classicalThrow2;
+    public Sprite classicalStand;
+    public Sprite classicalPaper1;
+    public Sprite classicalPaper2;
+    public Sprite classicalCatch;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -41,6 +50,9 @@ public class BossSpriteSwitcher : MonoBehaviour
             timerSetterCO = true;
             timerSetterCL = true;
             timerSetterFL = true;
+            countrySingle.transform.position = new Vector3(0, 20);
+            classicalSingle.transform.position = new Vector3(0, 20);
+            flamencoSingle.transform.position = new Vector3(0, 20);
 
         } 
         else if (country.activeSelf)
@@ -56,17 +68,19 @@ public class BossSpriteSwitcher : MonoBehaviour
         {
             if (timerSetterCL)
             {
-                inbetweenTimer = 32;
+                inbetweenTimer = 52;
                 timerSetterCL = false;
+                countrySingle.transform.position = new Vector3(0, 20);
             }
             ClassicalSpriteMovement();
         }
         else if (flamenco.activeSelf)
         {
-            if (timerSetterCO)
+            if (timerSetterFL)
             {
-                inbetweenTimer = 32;
+                inbetweenTimer = 52;
                 timerSetterFL = false;
+                classicalSingle.transform.position = new Vector3(0, 20);
             }
             FlamencoSpriteMovement();
         }
@@ -97,7 +111,7 @@ public class BossSpriteSwitcher : MonoBehaviour
             {
 
             }
-            else if (inbetweenTimer > 25.3)
+            else if (inbetweenTimer > 25.5)
             {
                 countrySpriteRenderer.sprite = countryKnifeSwipe;
                 country.transform.position = new Vector3(0, 20);
@@ -130,7 +144,83 @@ public class BossSpriteSwitcher : MonoBehaviour
         }
         void ClassicalSpriteMovement()
         {
+            if (inbetweenTimer > 50)
+            {
+                
+            }
+            else if (inbetweenTimer > 49.9)
+            {
+                classical.transform.position = new Vector3(0, 3.7f);
+            }
+            else if (inbetweenTimer > 48.5)
+            {
+                classical.transform.position += Vector3.left * Time.deltaTime * 5;
+                classicalSingle.transform.position += Vector3.left * Time.deltaTime * 5;
+            }
+            else if (inbetweenTimer > 34)
+            {
 
+            }
+            else if (inbetweenTimer > 33)
+            {
+                classical.transform.position = new Vector3(classical.transform.position.x, 20);
+                classicalSingle.transform.position = new Vector3(classical.transform.position.x, 3.7f);
+                classicalSpriteRenderer.sprite = classicalThrow1;
+            }
+            else if (inbetweenTimer > 32)
+            {
+                classicalSpriteRenderer.sprite = classicalThrow2;
+            }
+            else if (inbetweenTimer > 31)
+            {
+                classicalSpriteRenderer.sprite = classicalStand;
+            }
+            else if (inbetweenTimer > 27.9)
+            {
+                
+            }
+            else if (inbetweenTimer > 26.5)
+            {
+                classical.transform.position += Vector3.right * Time.deltaTime * 5;
+                classicalSingle.transform.position += Vector3.right * Time.deltaTime * 5;
+            }
+            else if (inbetweenTimer > 14)
+            {
+                
+            }
+            else if (inbetweenTimer > 12)
+            {
+                classicalSpriteRenderer.sprite = classicalPaper1;
+            }
+            else if (inbetweenTimer > 11)
+            {
+                classicalSpriteRenderer.sprite = classicalPaper2;
+            }
+            else if (inbetweenTimer > 10)
+            {
+                classicalSpriteRenderer.sprite = classicalStand;
+            }
+            else if (inbetweenTimer > 9)
+            {
+                
+            }
+            else if (inbetweenTimer > 8)
+            {
+                classicalSpriteRenderer.sprite = classicalCatch;
+            }
+            else if (inbetweenTimer > 7)
+            {
+                classical.transform.position = new Vector3(0, 3.7f);
+                classicalSingle.transform.position = new Vector3(0, 20);
+            }
+            else if (inbetweenTimer > 1)
+            {
+
+            }
+            else if (inbetweenTimer > 0)
+            {
+                inbetweenTimer = 50;
+            }
         }
         void FlamencoSpriteMovement()
         {

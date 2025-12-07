@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: d8406e5ced2d8ca48b3c2c24eb388dc9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1611241153322914755
+    second: classicalthrowup2_0
+  - first:
+      213: 8615185893961525759
+    second: classicalthrowup2_1
+  - first:
+      213: -5593513505241999032
+    second: classicalthrowup2_2
+  - first:
+      213: 6362920582864769046
+    second: classicalthrowup2_3
+  - first:
+      213: 3247640144372900010
+    second: classicalthrowup2_4
+  - first:
+      213: 2889002079418101493
+    second: classicalthrowup2_5
+  - first:
+      213: -4869843651037861381
+    second: classicalthrowup2_6
+  - first:
+      213: 781917559673771933
+    second: classicalthrowup2_7
+  - first:
+      213: 8167809182331450467
+    second: classicalthrowup2_8
+  - first:
+      213: 7673426497130725473
+    second: classicalthrowup2_9
+  - first:
+      213: 2005062409550124480
+    second: classicalthrowup2_10
+  - first:
+      213: 7915079657614591001
+    second: classicalthrowup2_11
+  - first:
+      213: 8987660061402172818
+    second: classicalthrowup2_12
+  - first:
+      213: -6287421398834623070
+    second: classicalthrowup2_13
+  - first:
+      213: -5587403277503043345
+    second: classicalthrowup2_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: classicalthrowup2_0
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 715
+        width: 6
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c62b035b8b3a9e0800000000000000
+      internalID: -1611241153322914755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_1
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 391
+        width: 194
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff96883ece94f8770800000000000000
+      internalID: 8615185893961525759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_2
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 659
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84953b94a19df52b0800000000000000
+      internalID: -5593513505241999032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_3
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 651
+        width: 6
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6101da3de82ad4850800000000000000
+      internalID: 6362920582864769046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_4
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 635
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa025ab218fe11d20800000000000000
+      internalID: 3247640144372900010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_5
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 639
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fea41ba51cc71820800000000000000
+      internalID: 2889002079418101493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_6
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 619
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf9623c3007da6cb0800000000000000
+      internalID: -4869843651037861381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_7
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 443
+        width: 126
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d97def3b0ede9da00800000000000000
+      internalID: 781917559673771933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_8
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 519
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3643a0a2d23e95170800000000000000
+      internalID: 8167809182331450467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_9
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 547
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1600c8b5ebc7d7a60800000000000000
+      internalID: 7673426497130725473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 347
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c559b163a963db10800000000000000
+      internalID: 2005062409550124480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_11
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 367
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914c901430308dd60800000000000000
+      internalID: 7915079657614591001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_12
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 303
+        width: 26
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d87d905359abc70800000000000000
+      internalID: 8987660061402172818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_13
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 91
+        width: 290
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2adc549cc879eb8a0800000000000000
+      internalID: -6287421398834623070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalthrowup2_14
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 379
+        width: 130
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8e39b825e8572b0800000000000000
+      internalID: -5587403277503043345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      classicalthrowup2_0: -1611241153322914755
+      classicalthrowup2_1: 8615185893961525759
+      classicalthrowup2_10: 2005062409550124480
+      classicalthrowup2_11: 7915079657614591001
+      classicalthrowup2_12: 8987660061402172818
+      classicalthrowup2_13: -6287421398834623070
+      classicalthrowup2_14: -5587403277503043345
+      classicalthrowup2_2: -5593513505241999032
+      classicalthrowup2_3: 6362920582864769046
+      classicalthrowup2_4: 3247640144372900010
+      classicalthrowup2_5: 2889002079418101493
+      classicalthrowup2_6: -4869843651037861381
+      classicalthrowup2_7: 781917559673771933
+      classicalthrowup2_8: 8167809182331450467
+      classicalthrowup2_9: 7673426497130725473
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

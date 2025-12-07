@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 5dcb892628abee7429b5775eeb9e877b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1455629998731416999
+    second: classicalcatch_0
+  - first:
+      213: 816836002340940807
+    second: classicalcatch_1
+  - first:
+      213: 744342638904021234
+    second: classicalcatch_2
+  - first:
+      213: -3934532569153531668
+    second: classicalcatch_3
+  - first:
+      213: -7115055118089193284
+    second: classicalcatch_4
+  - first:
+      213: 9023947580118301
+    second: classicalcatch_5
+  - first:
+      213: -2359359744546040053
+    second: classicalcatch_6
+  - first:
+      213: 7067268511201901025
+    second: classicalcatch_7
+  - first:
+      213: 6013550918194454975
+    second: classicalcatch_8
+  - first:
+      213: 3282745910893418096
+    second: classicalcatch_9
+  - first:
+      213: -5721110044718521888
+    second: classicalcatch_10
+  - first:
+      213: 5695169404298898455
+    second: classicalcatch_11
+  - first:
+      213: 2148035218976412892
+    second: classicalcatch_12
+  - first:
+      213: 7194191059497798414
+    second: classicalcatch_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: classicalcatch_0
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 715
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a26397a309ccbe0800000000000000
+      internalID: -1455629998731416999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_1
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 695
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c284f240cf55b00800000000000000
+      internalID: 816836002340940807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 387
+        width: 194
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f01d07bfaf645a00800000000000000
+      internalID: 744342638904021234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_3
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 631
+        width: 6
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce01662797bb569c0800000000000000
+      internalID: -3934532569153531668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_4
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 647
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8f7f8311f324d90800000000000000
+      internalID: -7115055118089193284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_5
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 555
+        width: 6
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d151cf58b3f002000800000000000000
+      internalID: 9023947580118301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_6
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 375
+        width: 130
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b071af010ded14fd0800000000000000
+      internalID: -2359359744546040053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_7
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 435
+        width: 106
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e93e76544bf31260800000000000000
+      internalID: 7067268511201901025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_8
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 415
+        width: 62
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb164bde2bc647350800000000000000
+      internalID: 6013550918194454975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_9
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 455
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0761ba26308ae8d20800000000000000
+      internalID: 3282745910893418096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 343
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e122afd9b88a90b0800000000000000
+      internalID: -5721110044718521888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_11
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 363
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ca8ee166e490f40800000000000000
+      internalID: 5695169404298898455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_12
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 299
+        width: 26
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd41e10a6aa5fcd10800000000000000
+      internalID: 2148035218976412892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classicalcatch_13
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 91
+        width: 298
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b48a3f6a6e6d360800000000000000
+      internalID: 7194191059497798414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      classicalcatch_0: -1455629998731416999
+      classicalcatch_1: 816836002340940807
+      classicalcatch_10: -5721110044718521888
+      classicalcatch_11: 5695169404298898455
+      classicalcatch_12: 2148035218976412892
+      classicalcatch_13: 7194191059497798414
+      classicalcatch_2: 744342638904021234
+      classicalcatch_3: -3934532569153531668
+      classicalcatch_4: -7115055118089193284
+      classicalcatch_5: 9023947580118301
+      classicalcatch_6: -2359359744546040053
+      classicalcatch_7: 7067268511201901025
+      classicalcatch_8: 6013550918194454975
+      classicalcatch_9: 3282745910893418096
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -231,7 +231,6 @@ public class AttackManager : MonoBehaviour
             }
             else if (attackPause > 44)
             {
-                CLsprite.transform.position = new Vector3(0, 3.7f);
                 staticSprite.transform.position = new Vector3(0, 20);
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;

@@ -4895,6 +4895,14 @@ MonoBehaviour:
   countryKnifeSwipe: {fileID: 21300000, guid: 3e2d8800ab177cc42a1e5bb0a07a59e8, type: 3}
   countryBanjo1: {fileID: 21300000, guid: ea9c011e77f5a4f4f9488e68171b6c58, type: 3}
   countryBanjo2: {fileID: 21300000, guid: f646ba8962f50dc4081c3c99321fb9c0, type: 3}
+  classicalSpriteRenderer: {fileID: 1715699361}
+  classicalIdle: {fileID: 5623600381407934655, guid: 89267561eefcb9446b0181c3bd0fd5ee, type: 3}
+  classicalThrow1: {fileID: 21300000, guid: 48968b8ba6d5a534e8200e62db43cfba, type: 3}
+  classicalThrow2: {fileID: 21300000, guid: d8406e5ced2d8ca48b3c2c24eb388dc9, type: 3}
+  classicalStand: {fileID: 21300000, guid: dacf11ef2578cc64e97b4bd004eec17b, type: 3}
+  classicalPaper1: {fileID: 21300000, guid: bc446e6c895e3414a96fc932597d2917, type: 3}
+  classicalPaper2: {fileID: 21300000, guid: 7f59c724d1ad93a42b5e27eb0c58004d, type: 3}
+  classicalCatch: {fileID: 21300000, guid: 5dcb892628abee7429b5775eeb9e877b, type: 3}
 --- !u!4 &1514512836
 Transform:
   m_ObjectHideFlags: 0
