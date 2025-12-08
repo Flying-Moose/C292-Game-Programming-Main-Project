@@ -52,9 +52,7 @@ public class BossSpriteSwitcher : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        radio.SetActive(false);
-        flamenco.SetActive(true);
-        timerSetterFL = true;
+
     }
 
     // Update is called once per frame
@@ -149,10 +147,13 @@ public class BossSpriteSwitcher : MonoBehaviour
             {
                 countrySpriteRenderer.sprite = countryBanjo2;
             }
+            else if (inbetweenTimer > 12)
+            {
+                countrySpriteRenderer.sprite = countryIdle;
+            }
             else if (inbetweenTimer > 11.5)
             {
-                country.transform.position = new Vector3(0, 3.7f);
-                countrySingle.transform.position = new Vector3(0, 20);
+                
             }
             else if (inbetweenTimer > 10)
             {
@@ -339,19 +340,23 @@ public class BossSpriteSwitcher : MonoBehaviour
                     flamenco.transform.position += Vector3.left * Time.deltaTime * 5;
                 }
             }
-            else if (inbetweenTimer > 11.5)
+            else if (inbetweenTimer > 12)
             {
                 flamencoSpriteRenderer.sprite = flamencoRose1;
             }
-            else if (inbetweenTimer > 10.5)
+            else if (inbetweenTimer > 11)
             {
                 flamencoSpriteRenderer.sprite = flamencoSpin;
             }
-            else if (inbetweenTimer > 9.5)
+            else if (inbetweenTimer > 10)
             {
                 flamencoSingle.transform.position += Vector3.left * Time.deltaTime * 5;
                 flamenco.transform.position += Vector3.left * Time.deltaTime * 5;
                 flamencoSpriteRenderer.sprite = flamencoRose2;
+            }
+            else if (inbetweenTimer > 8)
+            {
+                
             }
             else if (inbetweenTimer > 7)
             {
@@ -359,12 +364,21 @@ public class BossSpriteSwitcher : MonoBehaviour
             }
             else if (inbetweenTimer > 6)
             {
-                flamencoSpriteRenderer.sprite = flamencoCatch;
+                flamencoSingle.transform.position += Vector3.right * Time.deltaTime * 5;
+                flamenco.transform.position += Vector3.right * Time.deltaTime * 5;
             }
             else if (inbetweenTimer > 5)
             {
                 flamencoSingle.transform.position = new Vector3(0, 20);
                 flamenco.transform.position = new Vector3(0, 3.7f);
+            }
+            else if (inbetweenTimer > 1)
+            {
+                
+            }
+            else if (inbetweenTimer > 0)
+            {
+                inbetweenTimer = 50;
             }
         }
 
