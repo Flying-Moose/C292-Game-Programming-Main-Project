@@ -312,7 +312,6 @@ public class AttackManager : MonoBehaviour
             }
             else if (attackPause > 46.001)
             {
-                FLsprite.transform.position = new Vector3(0, 3.7f);
                 staticSprite.transform.position = new Vector3(0, 20);
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 6;
             } 

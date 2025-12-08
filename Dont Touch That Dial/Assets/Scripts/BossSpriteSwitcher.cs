@@ -33,11 +33,28 @@ public class BossSpriteSwitcher : MonoBehaviour
     public Sprite classicalPaper2;
     public Sprite classicalCatch;
 
+    public SpriteRenderer flamencoSpriteRenderer;
+    public Sprite flamencoIdle;
+    public Sprite flamencoSpin;
+    public Sprite flamencoSpin2;
+    public Sprite flamencoThrow1;
+    public Sprite flamencoThrow2;
+    public Sprite flamencoCatch;
+    public Sprite flamencoStand;
+    public Sprite flamencoJumpLeft1;
+    public Sprite flamencoJumpLeft2;
+    public Sprite flamencoJumpRight1;
+    public Sprite flamencoJumpRight2;
+    public Sprite flamencoRose1;
+    public Sprite flamencoRose2;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        radio.SetActive(false);
+        flamenco.SetActive(true);
+        timerSetterFL = true;
     }
 
     // Update is called once per frame
@@ -224,7 +241,131 @@ public class BossSpriteSwitcher : MonoBehaviour
         }
         void FlamencoSpriteMovement()
         {
+            if (inbetweenTimer > 50)
+            {
 
+            }
+            else if (inbetweenTimer > 49.5)
+            {
+                flamenco.transform.position = new Vector3(0, 20);
+                flamencoSingle.transform.position = new Vector3(0, 3.7f);
+                flamencoSpriteRenderer.sprite = flamencoSpin;
+            }
+            else if (inbetweenTimer > 49)
+            {
+                flamencoSpriteRenderer.sprite = flamencoSpin2;
+            }
+            else if (inbetweenTimer > 48.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoSpin;
+            }
+            else if (inbetweenTimer > 48)
+            {
+                flamencoSpriteRenderer.sprite = flamencoSpin2;
+            }
+            else if (inbetweenTimer > 47.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoSpin;
+            }
+            else if (inbetweenTimer > 47)
+            {
+                flamencoSpriteRenderer.sprite = flamencoSpin2;
+            }
+            else if (inbetweenTimer > 45.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoThrow1;
+            }
+            else if (inbetweenTimer > 44)
+            {
+                flamenco.transform.position += Vector3.left * Time.deltaTime * 7;
+                flamencoSingle.transform.position += Vector3.left * Time.deltaTime * 7;
+                flamencoSpriteRenderer.sprite = flamencoThrow2;
+            }
+            else if (inbetweenTimer > 33)
+            {
+                flamencoSpriteRenderer.sprite = flamencoStand;
+            }
+            else if (inbetweenTimer > 31.5)
+            {
+                flamenco.transform.position += Vector3.right * Time.deltaTime * 7;
+                flamencoSingle.transform.position += Vector3.right * Time.deltaTime * 7;
+            }
+            else if (inbetweenTimer > 30.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoSpin;
+            }
+            else if (inbetweenTimer > 29.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoSpin2;
+            }
+            else if (inbetweenTimer > 28.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoSpin;
+            }
+            else if (inbetweenTimer > 27.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoSpin2;
+            }
+            else if (inbetweenTimer > 26.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoStand;
+            }
+            else if (inbetweenTimer > 25.5)
+            {
+                flamenco.transform.position += Vector3.left * Time.deltaTime * 5;
+                flamencoSingle.transform.position += Vector3.left * Time.deltaTime * 5;
+                flamencoSpriteRenderer.sprite = flamencoJumpLeft1;
+            }
+            else if (inbetweenTimer > 22.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoJumpLeft2;
+            }
+            else if (inbetweenTimer > 21.5)
+            {
+                flamenco.transform.position += Vector3.right * Time.deltaTime * 8;
+                flamencoSingle.transform.position += Vector3.right * Time.deltaTime * 8;
+                flamencoSpriteRenderer.sprite = flamencoJumpRight1;
+            }
+            else if (inbetweenTimer > 18)
+            {
+                flamencoSpriteRenderer.sprite = flamencoJumpRight2;
+            }
+            else if (inbetweenTimer > 15)
+            {
+                flamencoSpriteRenderer.sprite = flamencoStand;
+                if (flamencoSingle.transform.position.x > 0)
+                {
+                    flamencoSingle.transform.position += Vector3.left * Time.deltaTime * 5;
+                    flamenco.transform.position += Vector3.left * Time.deltaTime * 5;
+                }
+            }
+            else if (inbetweenTimer > 11.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoRose1;
+            }
+            else if (inbetweenTimer > 10.5)
+            {
+                flamencoSpriteRenderer.sprite = flamencoSpin;
+            }
+            else if (inbetweenTimer > 9.5)
+            {
+                flamencoSingle.transform.position += Vector3.left * Time.deltaTime * 5;
+                flamenco.transform.position += Vector3.left * Time.deltaTime * 5;
+                flamencoSpriteRenderer.sprite = flamencoRose2;
+            }
+            else if (inbetweenTimer > 7)
+            {
+                flamencoSpriteRenderer.sprite = flamencoCatch;
+            }
+            else if (inbetweenTimer > 6)
+            {
+                flamencoSpriteRenderer.sprite = flamencoCatch;
+            }
+            else if (inbetweenTimer > 5)
+            {
+                flamencoSingle.transform.position = new Vector3(0, 20);
+                flamenco.transform.position = new Vector3(0, 3.7f);
+            }
         }
 
 

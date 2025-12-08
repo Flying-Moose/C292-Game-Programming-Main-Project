@@ -4903,6 +4903,20 @@ MonoBehaviour:
   classicalPaper1: {fileID: 21300000, guid: bc446e6c895e3414a96fc932597d2917, type: 3}
   classicalPaper2: {fileID: 21300000, guid: 7f59c724d1ad93a42b5e27eb0c58004d, type: 3}
   classicalCatch: {fileID: 21300000, guid: 5dcb892628abee7429b5775eeb9e877b, type: 3}
+  flamencoSpriteRenderer: {fileID: 1213518017}
+  flamencoIdle: {fileID: -6713405039088035418, guid: 01847af902d316347b445b31bd55d98f, type: 3}
+  flamencoSpin: {fileID: 21300000, guid: 62e5e31f49aea6443ba951270df5881b, type: 3}
+  flamencoSpin2: {fileID: 21300000, guid: d29c5aef582c9a24abf90326553e53dd, type: 3}
+  flamencoThrow1: {fileID: 21300000, guid: 97ee61115fdb07e45a483861539382cd, type: 3}
+  flamencoThrow2: {fileID: 21300000, guid: 2038f3859ed76c14fb37b31b00f989d4, type: 3}
+  flamencoCatch: {fileID: 21300000, guid: 2487779bef20924409498f840f1dc0d1, type: 3}
+  flamencoStand: {fileID: 21300000, guid: 84e23fdc96b470443bb1ffdb75c3dbc5, type: 3}
+  flamencoJumpLeft1: {fileID: 21300000, guid: 854f160446523434882e681c6db8ccf0, type: 3}
+  flamencoJumpLeft2: {fileID: 21300000, guid: d11faebf116a7fb448f242c3c74ce4c0, type: 3}
+  flamencoJumpRight1: {fileID: 21300000, guid: 2ffb4a52cc77c854191d58ae7d88e431, type: 3}
+  flamencoJumpRight2: {fileID: 21300000, guid: 3b15f6183a3d26944aba518e2cf82d54, type: 3}
+  flamencoRose1: {fileID: 21300000, guid: 33f963a6e3ca5c940bb4a11db6a9b07f, type: 3}
+  flamencoRose2: {fileID: 21300000, guid: 38cf97204f3cb4146bf39fd832441950, type: 3}
 --- !u!4 &1514512836
 Transform:
   m_ObjectHideFlags: 0
