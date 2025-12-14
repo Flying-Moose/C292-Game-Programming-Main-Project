@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     public Sprite downPlayerSprite;
     public Sprite LRPlayerSprite;
     public bool spriteFlip;
+    private bool damaged;
+    private float damageInbetweenTimer;
 
     public GameObject radio;
     public GameObject country;
@@ -130,6 +132,21 @@ public class PlayerController : MonoBehaviour
             country.SetActive(true);
             radio.SetActive(false);
         }
+
+        if (damaged)
+        {
+            spriteRenderer.sprite = null;
+
+            if (damageInbetweenTimer > 0)
+            {
+                damageInbetweenTimer -= Time.deltaTime;
+            }
+            else
+            {
+                spriteRenderer.sprite = playerSprite;
+                damaged = false;
+            }
+        }
     }
     public void BarrierCheck()
     {
@@ -146,6 +163,8 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Attack") && invulTimer <= 0)
         {
+            damaged = true;
+            damageInbetweenTimer = 0.1f;
             health -= 1;
             Debug.Log("ouchie!");
             invulTimer = 1;

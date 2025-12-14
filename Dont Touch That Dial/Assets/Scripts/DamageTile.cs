@@ -12,12 +12,18 @@ public class DamageTile : MonoBehaviour
     private Vector2 damageTileNewPosition;
     private bool readyToCountDown;
     private bool stopDamageTile;
+    private bool damaged;
+    private bool damaged2;
+    private float bossDamageInbetweenTimer;
+    private float bossDamageInbetweenTimer2;
 
     private int bossHealth = 0;
     public GameObject country;
     public GameObject classical;
     public GameObject flamenco;
     public GameObject radio;
+    public GameObject bossDamageMask;
+    public GameObject staticSprite;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +34,7 @@ public class DamageTile : MonoBehaviour
         country.SetActive(false);
         classical.SetActive(false);
         flamenco.SetActive(false);
+        bossDamageMask.SetActive(false);
         stopDamageTile = true;
     }
 
@@ -61,6 +68,57 @@ public class DamageTile : MonoBehaviour
             stopDamageTile = true;
             bossHealth = 0;
         }
+
+        if (damaged && staticSprite.transform.position != new Vector3(0, 3.1f))
+        {
+            bossDamageMask.SetActive(true);
+
+            if (bossDamageInbetweenTimer > 0)
+            {
+                bossDamageInbetweenTimer -= Time.deltaTime;
+            }
+            else
+            {
+                bossDamageMask.SetActive(false);
+                bossDamageInbetweenTimer2 = 0.05f;
+                damaged2 = true;
+                damaged = false;
+            }
+        } 
+        else if (staticSprite.transform.position == new Vector3(0, 3.1f))
+        {
+            if (bossDamageInbetweenTimer > 0)
+            {
+                bossDamageInbetweenTimer -= Time.deltaTime;
+            }
+            else
+            {
+                damaged = false;
+            }
+        }
+
+        if (damaged2 && staticSprite.transform.position != new Vector3(0, 3.1f))
+        {
+            if (bossDamageInbetweenTimer2 > 0)
+            {
+                bossDamageInbetweenTimer2 -= Time.deltaTime;
+                bossDamageInbetweenTimer = 0.1f;
+            }
+            else
+            {
+                bossDamageMask.SetActive(true);
+
+                if (bossDamageInbetweenTimer > 0)
+                {
+                    bossDamageInbetweenTimer -= Time.deltaTime;
+                }
+                else
+                {
+                    bossDamageMask.SetActive(false);
+                    damaged2 = false;
+                }
+            }
+        }
     }
     private void DetectBossHealth()
     {
@@ -84,6 +142,8 @@ public class DamageTile : MonoBehaviour
     {
         if (collision.gameObject.transform.tag == "Player")
         {
+            damaged = true;
+            bossDamageInbetweenTimer = 0.1f;
             damageTileNewPosition.y = 15;
             damageTile.gameObject.transform.position = damageTileNewPosition;
             Debug.Log("Damaged the boss!");
