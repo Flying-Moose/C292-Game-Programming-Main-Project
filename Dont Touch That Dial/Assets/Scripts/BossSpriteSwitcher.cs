@@ -10,6 +10,7 @@ public class BossSpriteSwitcher : MonoBehaviour
     public GameObject classicalSingle;
     public GameObject flamencoSingle;
     public GameObject radio;
+    public GameObject title;
 
     private float inbetweenTimer;
     private bool timerSetterCO;
@@ -68,16 +69,18 @@ public class BossSpriteSwitcher : MonoBehaviour
             countrySingle.transform.position = new Vector3(0, 20);
             classicalSingle.transform.position = new Vector3(0, 20);
             flamencoSingle.transform.position = new Vector3(0, 20);
-
+            title.SetActive(true);
         } 
         else if (country.activeSelf)
         {
+            
             if (timerSetterCO)
             {
                 inbetweenTimer = 32;
                 timerSetterCO = false;
             }
             CountrySpriteMovement();
+            title.SetActive(false);
         }
         else if (classical.activeSelf)
         {
