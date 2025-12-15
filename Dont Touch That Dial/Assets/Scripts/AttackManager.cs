@@ -33,7 +33,9 @@ public class AttackManager : MonoBehaviour
 
     private float attackPause;
     private float randInt;
+    private float randInt2;
     private bool ifRand = true;
+    private bool ifRand2 = true;
 
     GameObject bullet1 = null;
     GameObject bullet2 = null;
@@ -135,12 +137,15 @@ public class AttackManager : MonoBehaviour
             {
                 if (attackPause > 30)
                 {
-                    staticSprite.transform.position = new Vector3(0, 3.1f);
+                    ifRand = true;
+                    ifRand2 = true;
+                staticSprite.transform.position = new Vector3(0, 3.1f);
                 }
                 else if (attackPause > 26.4)
                 {
                     staticSprite.transform.position = new Vector3(0, 20);
                     OneRandom(0, -4);
+                    OneRandom2(-0.5f, 0.5f);
                     bomb.transform.position = new Vector3(-15, randInt);
                     bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
                     bullet2.transform.position += Vector3.down * Time.deltaTime * 7;
@@ -149,6 +154,7 @@ public class AttackManager : MonoBehaviour
                 else if (attackPause > 25.9)
                 {
                     ifRand = true;
+                    ifRand2 = true;
                     bullet2.gameObject.transform.position = new Vector3(0, 10);
                     bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
                     bullet3.transform.position += Vector3.down * Time.deltaTime * 7;
@@ -164,8 +170,8 @@ public class AttackManager : MonoBehaviour
                     bomb2.transform.position = new Vector3(15, randInt);
                     bullet1.transform.position += Vector3.down * Time.deltaTime * 7;
                     bullet3.transform.position += Vector3.down * Time.deltaTime * 7;
-                    splitBullet1.transform.position -= new Vector3(-0.5f, -1) * Time.deltaTime * 7;
-                    splitBullet2.transform.position -= new Vector3(0.5f, 1) * Time.deltaTime * 7;
+                    splitBullet1.transform.position -= new Vector3(-randInt2, -1) * Time.deltaTime * 7;
+                    splitBullet2.transform.position -= new Vector3(randInt2, 1) * Time.deltaTime * 7;
                     splitBullet1.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
                     splitBullet2.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
                     swipe.gameObject.transform.position = new Vector3(0, 10);
@@ -175,8 +181,8 @@ public class AttackManager : MonoBehaviour
                     ifRand = true;
                     splitBullet1.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
                     splitBullet2.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
-                    splitBullet1.transform.position -= new Vector3(-0.5f, -1) * Time.deltaTime * 7;
-                    splitBullet2.transform.position -= new Vector3(0.5f, 1) * Time.deltaTime * 7;
+                    splitBullet1.transform.position -= new Vector3(-randInt2, -1) * Time.deltaTime * 7;
+                    splitBullet2.transform.position -= new Vector3(randInt2, 1) * Time.deltaTime * 7;
                     bomb.transform.position += Vector3.right * Time.deltaTime * 8;
                     bomb.transform.eulerAngles += new Vector3(0, 0, -30) * Time.deltaTime;
                 }
@@ -227,32 +233,40 @@ public class AttackManager : MonoBehaviour
         {
             if (attackPause > 50)
             {
+                ifRand = true;
+                ifRand2 = true;
                 staticSprite.transform.position = new Vector3(0, 3.1f);
             }
             else if (attackPause > 44)
             {
+                OneRandom(-0.1f, 0.1f);
                 staticSprite.transform.position = new Vector3(0, 20);
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
             }
             else if (attackPause > 40)
             {
+                ifRand = true;
+                OneRandom2(-0.1f, 0.1f);
                 note1.transform.eulerAngles += new Vector3(0, 0, -10) * Time.deltaTime;
-                note1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 8;
+                note1.transform.position += new Vector3(randInt, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
             }
             else if (attackPause > 35)
             {
+                ifRand2 = true;
+                OneRandom(-0.1f, 0.1f);
                 note2.transform.eulerAngles += new Vector3(0, 0, 10) * Time.deltaTime;
-                note2.transform.position += new Vector3(0.1f, -1) * Time.deltaTime * 8;
+                note2.transform.position += new Vector3(randInt2, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
             }
             else if (attackPause > 30)
             {
+                ifRand = true;
                 note3.transform.eulerAngles += new Vector3(0, 0, -10) * Time.deltaTime;
-                note3.transform.position += new Vector3(-0.05f, -1) * Time.deltaTime * 8;
+                note3.transform.position += new Vector3(randInt, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
             }
@@ -270,22 +284,26 @@ public class AttackManager : MonoBehaviour
             }
             else if (attackPause > 12.2)
             {
+                OneRandom(-1, -1.2f);
+                OneRandom2(1, 1.2f);
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
                 flute.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 5;
             } else if (attackPause > 8)
             {
+                ifRand = true;
+                ifRand2 = true;
                 stanza1.transform.position = new Vector3(20, -2);
                 stanza2.transform.position = new Vector3(31.5f, -3);
                 flute.transform.position += Vector3.down * Time.deltaTime * 7;
                 paper1.transform.eulerAngles += new Vector3(0, 0, 50) * Time.deltaTime;
-                paper1.transform.position += new Vector3(-1, -1) * Time.deltaTime * 7;
+                paper1.transform.position += new Vector3(randInt, -1) * Time.deltaTime * 7;
             }
             else if (attackPause > 4)
             {
                 paper1.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
                 paper1.transform.position += new Vector3(-1.5f, -1) * Time.deltaTime * 5;
-                paper2.transform.position += new Vector3(1, -1.5f) * Time.deltaTime * 5;
+                paper2.transform.position += new Vector3(randInt2, -1.5f) * Time.deltaTime * 5;
                 paper2.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
             }
             else if (attackPause > 1)
@@ -308,6 +326,8 @@ public class AttackManager : MonoBehaviour
         {
             if (attackPause > 50)
             {
+                ifRand = true;
+                ifRand2 = true;
                 staticSprite.transform.position = new Vector3(0, 3.1f);
             }
             else if (attackPause > 46.001)
@@ -331,11 +351,17 @@ public class AttackManager : MonoBehaviour
             }
             else if (attackPause > 27.999)
             {
+                OneRandom(0, -4);
+                OneRandom2(0, -4);
                 fan.SetActive(false);
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 6;
             }
             else if (attackPause > 25.5f)
             {
+                ifRand = true;
+                ifRand2 = true;
+                fire1.transform.position = new Vector3(20, randInt);
+                fire2.transform.position = new Vector3(-20, randInt2);
                 fan.SetActive(true);
                 fan.transform.position = new Vector3(-1, 20);
                 fan.transform.eulerAngles = Vector3.zero;
@@ -434,6 +460,14 @@ public class AttackManager : MonoBehaviour
         {
             randInt = Random.Range(int1, int2);
             ifRand = false;
+        }
+    }
+    void OneRandom2(float int1, float int2)
+    {
+        if (ifRand2)
+        {
+            randInt2 = Random.Range(int1, int2);
+            ifRand2 = false;
         }
     }
 
