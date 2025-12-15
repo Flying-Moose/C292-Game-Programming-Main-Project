@@ -27,15 +27,21 @@ public class PlayerController : MonoBehaviour
     private bool damaged;
     private float damageInbetweenTimer;
 
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
+
     public GameObject radio;
     public GameObject country;
     public GameObject classical;
     public GameObject flamenco;
 
+    public AudioSource damage;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -93,22 +99,50 @@ public class PlayerController : MonoBehaviour
             health = 3;
         }
 
-        void Moving(Vector3 desiredMovement)
+        if (health == 3 && !radio.activeSelf)
         {
-            if (desiredMovement.x == -1 && player.gameObject.transform.position.x > currPlayerPosition.x)
-            {
-                ActuallyMovePlayer();
-            } else if (desiredMovement.x == 1 && player.gameObject.transform.position.x < currPlayerPosition.x)
-            {
-                ActuallyMovePlayer();
-            } else if (desiredMovement.y == -1 && player.gameObject.transform.position.y > currPlayerPosition.y)
-            {
-                ActuallyMovePlayer();
-            } else if (desiredMovement.y == 1 && player.gameObject.transform.position.y < currPlayerPosition.y)
-            {
-                ActuallyMovePlayer();
-            }
+            heart3.SetActive(true);
+            heart2.SetActive(true);
+            heart1.SetActive(true);
+        } 
+        else if (health == 2 && !radio.activeSelf)
+        {
+            heart3.SetActive(false);
+            heart2.SetActive(true);
+            heart1.SetActive(true);
         }
+        else if (health == 1 && !radio.activeSelf)
+        {
+            heart3.SetActive(false);
+            heart2.SetActive(false);
+            heart1.SetActive(true);
+        }
+        else if (radio.activeSelf)
+        {
+            heart3.SetActive(false);
+            heart2.SetActive(false);
+            heart1.SetActive(false);
+        }
+
+        void Moving(Vector3 desiredMovement)
+            {
+                if (desiredMovement.x == -1 && player.gameObject.transform.position.x > currPlayerPosition.x)
+                {
+                    ActuallyMovePlayer();
+                }
+                else if (desiredMovement.x == 1 && player.gameObject.transform.position.x < currPlayerPosition.x)
+                {
+                    ActuallyMovePlayer();
+                }
+                else if (desiredMovement.y == -1 && player.gameObject.transform.position.y > currPlayerPosition.y)
+                {
+                    ActuallyMovePlayer();
+                }
+                else if (desiredMovement.y == 1 && player.gameObject.transform.position.y < currPlayerPosition.y)
+                {
+                    ActuallyMovePlayer();
+                }
+            }
         void ActuallyMovePlayer()
         {
             player.gameObject.transform.position += moveDist * Time.deltaTime * 5;
@@ -168,6 +202,7 @@ public class PlayerController : MonoBehaviour
             health -= 1;
             Debug.Log("ouchie!");
             invulTimer = 1;
+            damage.Play();
         }
     }
 }

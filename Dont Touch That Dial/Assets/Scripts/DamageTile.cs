@@ -24,6 +24,7 @@ public class DamageTile : MonoBehaviour
     public GameObject radio;
     public GameObject bossDamageMask;
     public GameObject staticSprite;
+    public AudioSource damage;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -151,6 +152,7 @@ public class DamageTile : MonoBehaviour
             DetectBossHealth();
             damageInbetweenTimer = 6;
             readyToCountDown = true;
+            damage.Play();
         }
     }
 }
