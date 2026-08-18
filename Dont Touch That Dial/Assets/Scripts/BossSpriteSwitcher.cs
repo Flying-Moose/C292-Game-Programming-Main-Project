@@ -49,6 +49,9 @@ public class BossSpriteSwitcher : MonoBehaviour
     public Sprite flamencoRose1;
     public Sprite flamencoRose2;
 
+    public AudioSource shoot;
+    public AudioSource knifeSwipe;
+    public AudioSource banjoSwipe;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -116,6 +119,7 @@ public class BossSpriteSwitcher : MonoBehaviour
                 country.transform.position = new Vector3(0, 20);
                 countrySingle.transform.position = new Vector3(0, 3.7f);
                 countrySpriteRenderer.sprite = countryShoot1;
+                PlayOnce(shoot, 0.5f);
             }
             else if (inbetweenTimer > 29.3)
             {
@@ -136,6 +140,7 @@ public class BossSpriteSwitcher : MonoBehaviour
                 countrySpriteRenderer.sprite = countryKnifeSwipe;
                 country.transform.position = new Vector3(0, 20);
                 countrySingle.transform.position = new Vector3(0, 3.7f);
+                PlayOnce(knifeSwipe, 0.5f);
             }
             else if (inbetweenTimer > 16)
             {
@@ -151,6 +156,7 @@ public class BossSpriteSwitcher : MonoBehaviour
             else if (inbetweenTimer > 12.5)
             {
                 countrySpriteRenderer.sprite = countryBanjo2;
+                PlayOnce(banjoSwipe, 0.5f);
             }
             else if (inbetweenTimer > 12)
             {
@@ -158,7 +164,7 @@ public class BossSpriteSwitcher : MonoBehaviour
             }
             else if (inbetweenTimer > 11.5)
             {
-                
+
             }
             else if (inbetweenTimer > 10)
             {
@@ -391,6 +397,21 @@ public class BossSpriteSwitcher : MonoBehaviour
         if (inbetweenTimer > 0)
         {
             inbetweenTimer -= Time.deltaTime * 2;
+        }
+    }
+
+
+    private void PlayOnce(AudioSource audio, float waitTime)
+    {
+        float timer = 0;
+        if (!audio.isPlaying && timer <= 0)
+        {
+            audio.Play();
+            timer = waitTime;
+        }
+        else if (timer > 0)
+        {
+            timer -= Time.deltaTime;
         }
     }
 }

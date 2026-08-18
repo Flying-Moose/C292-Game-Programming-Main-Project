@@ -76,6 +76,11 @@ public class AttackManager : MonoBehaviour
     public GameObject CLcollection;
     public GameObject FLcollection;
 
+    public AudioSource bombThrow;
+    public AudioSource bombExplode;
+
+    private float soundEffectTimer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -185,6 +190,7 @@ public class AttackManager : MonoBehaviour
                     splitBullet2.transform.position -= new Vector3(randInt2, 1) * Time.deltaTime * 7;
                     bomb.transform.position += Vector3.right * Time.deltaTime * 8;
                     bomb.transform.eulerAngles += new Vector3(0, 0, -30) * Time.deltaTime;
+                    PlayOnce(bombThrow, 2);
                 }
                 else if (attackPause > 19.5)
                 {
@@ -193,6 +199,7 @@ public class AttackManager : MonoBehaviour
                     blast.transform.position = bomb.transform.position;
                     blast.transform.eulerAngles += new Vector3(0, 0, 30) * Time.deltaTime;
                     bomb.SetActive(false);
+                    PlayOnce(bombExplode, 0.5f);
                 }
                 else if (attackPause > 15.5)
                 {
@@ -202,13 +209,15 @@ public class AttackManager : MonoBehaviour
                     blast.transform.eulerAngles = Vector3.zero;
                     bomb2.transform.eulerAngles += new Vector3(0, 0, 20) * Time.deltaTime;
                     bomb2.transform.position += Vector3.left * Time.deltaTime * 8;
+                    PlayOnce(bombThrow, 2);
                 }
                 else if (attackPause > 15)
                 {
                     blast2.transform.position = bomb2.transform.position;
                     blast2.transform.eulerAngles += new Vector3(0, 0, -30) * Time.deltaTime;
                     bomb2.SetActive(false);
-                }
+                    PlayOnce(bombExplode, 0.5f);
+            }
                 else if (attackPause > 13.5)
                 {
                     bomb2.SetActive(true);
@@ -468,6 +477,20 @@ public class AttackManager : MonoBehaviour
         {
             randInt2 = Random.Range(int1, int2);
             ifRand2 = false;
+        }
+    }
+
+    private void PlayOnce(AudioSource audio, float waitTime)
+    {
+        float timer = 0;
+        if (!audio.isPlaying && timer <= 0)
+        {
+            audio.Play();
+            timer = waitTime;
+        }
+        else if (timer > 0)
+        {
+            timer -= Time.deltaTime;
         }
     }
 
