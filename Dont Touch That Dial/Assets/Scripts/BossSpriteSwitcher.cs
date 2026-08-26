@@ -53,10 +53,23 @@ public class BossSpriteSwitcher : MonoBehaviour
     public AudioSource knifeSwipe;
     public AudioSource banjoSwipe;
 
+    public AudioSource fluteThrow;
+    public AudioSource paperRustle;
+    public AudioSource paperThrow;
+
+    public AudioSource dressSpin;
+    public AudioSource screenMovement;
+    public AudioSource shoeClack;
+    public AudioSource stomp;
+    public AudioSource lingering;
+    public AudioSource grab;
+
+    private AudioSource chosenAudio = null;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        //timerSetterFL = true; // REMOVE
     }
 
     // Update is called once per frame
@@ -119,7 +132,7 @@ public class BossSpriteSwitcher : MonoBehaviour
                 country.transform.position = new Vector3(0, 20);
                 countrySingle.transform.position = new Vector3(0, 3.7f);
                 countrySpriteRenderer.sprite = countryShoot1;
-                PlayOnce(shoot, 0.5f);
+                PlayOnce(shoot);
             }
             else if (inbetweenTimer > 29.3)
             {
@@ -140,7 +153,7 @@ public class BossSpriteSwitcher : MonoBehaviour
                 countrySpriteRenderer.sprite = countryKnifeSwipe;
                 country.transform.position = new Vector3(0, 20);
                 countrySingle.transform.position = new Vector3(0, 3.7f);
-                PlayOnce(knifeSwipe, 0.5f);
+                PlayOnce(knifeSwipe);
             }
             else if (inbetweenTimer > 16)
             {
@@ -156,7 +169,8 @@ public class BossSpriteSwitcher : MonoBehaviour
             else if (inbetweenTimer > 12.5)
             {
                 countrySpriteRenderer.sprite = countryBanjo2;
-                PlayOnce(banjoSwipe, 0.5f);
+                PlayOnce(banjoSwipe);
+                PlayOnce(stomp);
             }
             else if (inbetweenTimer > 12)
             {
@@ -198,6 +212,7 @@ public class BossSpriteSwitcher : MonoBehaviour
             }
             else if (inbetweenTimer > 32)
             {
+                PlayOnce(fluteThrow);
                 classicalSpriteRenderer.sprite = classicalThrow2;
             }
             else if (inbetweenTimer > 31)
@@ -219,10 +234,12 @@ public class BossSpriteSwitcher : MonoBehaviour
             }
             else if (inbetweenTimer > 12)
             {
+                PlayOnce(paperRustle);
                 classicalSpriteRenderer.sprite = classicalPaper1;
             }
             else if (inbetweenTimer > 11)
             {
+                PlayOnce(paperThrow);
                 classicalSpriteRenderer.sprite = classicalPaper2;
             }
             else if (inbetweenTimer > 10)
@@ -236,6 +253,7 @@ public class BossSpriteSwitcher : MonoBehaviour
             else if (inbetweenTimer > 8)
             {
                 classicalSpriteRenderer.sprite = classicalCatch;
+                PlayOnce(grab);
             }
             else if (inbetweenTimer > 7)
             {
@@ -262,6 +280,7 @@ public class BossSpriteSwitcher : MonoBehaviour
                 flamenco.transform.position = new Vector3(0, 20);
                 flamencoSingle.transform.position = new Vector3(0, 3.7f);
                 flamencoSpriteRenderer.sprite = flamencoSpin;
+                PlayOnce(dressSpin);
             }
             else if (inbetweenTimer > 49)
             {
@@ -292,6 +311,7 @@ public class BossSpriteSwitcher : MonoBehaviour
                 flamenco.transform.position += Vector3.left * Time.deltaTime * 7;
                 flamencoSingle.transform.position += Vector3.left * Time.deltaTime * 7;
                 flamencoSpriteRenderer.sprite = flamencoThrow2;
+                PlayOnce(fluteThrow);
             }
             else if (inbetweenTimer > 33)
             {
@@ -301,10 +321,12 @@ public class BossSpriteSwitcher : MonoBehaviour
             {
                 flamenco.transform.position += Vector3.right * Time.deltaTime * 7;
                 flamencoSingle.transform.position += Vector3.right * Time.deltaTime * 7;
+                chosenAudio = null;
             }
             else if (inbetweenTimer > 30.5)
             {
                 flamencoSpriteRenderer.sprite = flamencoSpin;
+                PlayOnce(dressSpin);
             }
             else if (inbetweenTimer > 29.5)
             {
@@ -327,20 +349,24 @@ public class BossSpriteSwitcher : MonoBehaviour
                 flamenco.transform.position += Vector3.left * Time.deltaTime * 5;
                 flamencoSingle.transform.position += Vector3.left * Time.deltaTime * 5;
                 flamencoSpriteRenderer.sprite = flamencoJumpLeft1;
+                PlayOnce(shoeClack);
             }
             else if (inbetweenTimer > 22.5)
             {
                 flamencoSpriteRenderer.sprite = flamencoJumpLeft2;
+                PlayOnce(stomp);
             }
             else if (inbetweenTimer > 21.5)
             {
                 flamenco.transform.position += Vector3.right * Time.deltaTime * 8;
                 flamencoSingle.transform.position += Vector3.right * Time.deltaTime * 8;
                 flamencoSpriteRenderer.sprite = flamencoJumpRight1;
+                PlayOnce(shoeClack);
             }
             else if (inbetweenTimer > 18)
             {
                 flamencoSpriteRenderer.sprite = flamencoJumpRight2;
+                PlayOnce(stomp);
             }
             else if (inbetweenTimer > 15)
             {
@@ -354,16 +380,20 @@ public class BossSpriteSwitcher : MonoBehaviour
             else if (inbetweenTimer > 12)
             {
                 flamencoSpriteRenderer.sprite = flamencoRose1;
+                PlayOnce(shoeClack);
             }
             else if (inbetweenTimer > 11)
             {
                 flamencoSpriteRenderer.sprite = flamencoSpin;
+                PlayOnce(dressSpin);
             }
             else if (inbetweenTimer > 10)
             {
                 flamencoSingle.transform.position += Vector3.left * Time.deltaTime * 5;
                 flamenco.transform.position += Vector3.left * Time.deltaTime * 5;
                 flamencoSpriteRenderer.sprite = flamencoRose2;
+                dressSpin.Stop();
+                PlayOnce(lingering);
             }
             else if (inbetweenTimer > 8)
             {
@@ -372,6 +402,7 @@ public class BossSpriteSwitcher : MonoBehaviour
             else if (inbetweenTimer > 7)
             {
                 flamencoSpriteRenderer.sprite = flamencoCatch;
+                PlayOnce(grab);
             }
             else if (inbetweenTimer > 6)
             {
@@ -400,18 +431,12 @@ public class BossSpriteSwitcher : MonoBehaviour
         }
     }
 
-
-    private void PlayOnce(AudioSource audio, float waitTime)
+    private void PlayOnce(AudioSource audio)
     {
-        float timer = 0;
-        if (!audio.isPlaying && timer <= 0)
+        if (!audio.isPlaying && chosenAudio != audio)
         {
             audio.Play();
-            timer = waitTime;
-        }
-        else if (timer > 0)
-        {
-            timer -= Time.deltaTime;
+            chosenAudio = audio;
         }
     }
 }

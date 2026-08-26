@@ -78,13 +78,26 @@ public class AttackManager : MonoBehaviour
 
     public AudioSource bombThrow;
     public AudioSource bombExplode;
+    public AudioSource fluteNote1;
+    public AudioSource fluteNote2;
+    public AudioSource fluteNote3;
+    public AudioSource fluteSpin;
+    public AudioSource fluteThrow;
+    public AudioSource paperRuffle;
+    public AudioSource paperRuffle2;
+    public AudioSource flameIgnite;
+    public AudioSource flamePan;
+    public AudioSource screenTilt;
 
-    private float soundEffectTimer;
+    private AudioSource chosenAudio = null;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         InstantiateEverything();
+        //radioSprite.SetActive(false); // REMOVE ALL THIS LINE AND BELOW
+        //FLsprite.SetActive(true);
+        //FLInit = true;
     }
 
     // Update is called once per frame
@@ -101,6 +114,7 @@ public class AttackManager : MonoBehaviour
             CLcollection.SetActive(false);
             FLcollection.SetActive(false);
             COInit = true;
+            fluteSpin.Stop();
         }
         else if (COsprite.activeSelf)
         {
@@ -122,6 +136,7 @@ public class AttackManager : MonoBehaviour
                 attackPause = 52;
                 FLInit = true;
                 CLInit = false;
+                fluteSpin.Stop();
             }
             CLAttacks();
         } 
@@ -135,6 +150,7 @@ public class AttackManager : MonoBehaviour
                 attackPause = 52;
                 COInit = true;
                 FLInit = false;
+                fluteSpin.Stop();
             }
             FLAttacks();
         }
@@ -190,7 +206,7 @@ public class AttackManager : MonoBehaviour
                     splitBullet2.transform.position -= new Vector3(randInt2, 1) * Time.deltaTime * 7;
                     bomb.transform.position += Vector3.right * Time.deltaTime * 8;
                     bomb.transform.eulerAngles += new Vector3(0, 0, -30) * Time.deltaTime;
-                    PlayOnce(bombThrow, 2);
+                    PlayOnce(flameIgnite);
                 }
                 else if (attackPause > 19.5)
                 {
@@ -199,7 +215,7 @@ public class AttackManager : MonoBehaviour
                     blast.transform.position = bomb.transform.position;
                     blast.transform.eulerAngles += new Vector3(0, 0, 30) * Time.deltaTime;
                     bomb.SetActive(false);
-                    PlayOnce(bombExplode, 0.5f);
+                    PlayOnce(bombExplode);
                 }
                 else if (attackPause > 15.5)
                 {
@@ -209,14 +225,14 @@ public class AttackManager : MonoBehaviour
                     blast.transform.eulerAngles = Vector3.zero;
                     bomb2.transform.eulerAngles += new Vector3(0, 0, 20) * Time.deltaTime;
                     bomb2.transform.position += Vector3.left * Time.deltaTime * 8;
-                    PlayOnce(bombThrow, 2);
+                    PlayOnce(flameIgnite);
                 }
                 else if (attackPause > 15)
                 {
                     blast2.transform.position = bomb2.transform.position;
                     blast2.transform.eulerAngles += new Vector3(0, 0, -30) * Time.deltaTime;
                     bomb2.SetActive(false);
-                    PlayOnce(bombExplode, 0.5f);
+                    PlayOnce(bombExplode);
             }
                 else if (attackPause > 13.5)
                 {
@@ -261,6 +277,7 @@ public class AttackManager : MonoBehaviour
                 note1.transform.position += new Vector3(randInt, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+                PlayOnce(fluteNote1);
             }
             else if (attackPause > 35)
             {
@@ -270,6 +287,7 @@ public class AttackManager : MonoBehaviour
                 note2.transform.position += new Vector3(randInt2, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+                PlayOnce(fluteNote2);
             }
             else if (attackPause > 30)
             {
@@ -278,6 +296,7 @@ public class AttackManager : MonoBehaviour
                 note3.transform.position += new Vector3(randInt, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+                PlayOnce(fluteNote3);
             }
             else if (attackPause > 26.6)
             {
@@ -298,6 +317,7 @@ public class AttackManager : MonoBehaviour
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
                 flute.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 5;
+                PlayOnce(fluteSpin);
             } else if (attackPause > 8)
             {
                 ifRand = true;
@@ -307,6 +327,7 @@ public class AttackManager : MonoBehaviour
                 flute.transform.position += Vector3.down * Time.deltaTime * 7;
                 paper1.transform.eulerAngles += new Vector3(0, 0, 50) * Time.deltaTime;
                 paper1.transform.position += new Vector3(randInt, -1) * Time.deltaTime * 7;
+                fluteSpin.Stop();
             }
             else if (attackPause > 4)
             {
@@ -314,6 +335,7 @@ public class AttackManager : MonoBehaviour
                 paper1.transform.position += new Vector3(-1.5f, -1) * Time.deltaTime * 5;
                 paper2.transform.position += new Vector3(randInt2, -1.5f) * Time.deltaTime * 5;
                 paper2.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
+                PlayOnce(paperRuffle);
             }
             else if (attackPause > 1)
             {
@@ -321,6 +343,7 @@ public class AttackManager : MonoBehaviour
                 flute.transform.eulerAngles = Vector3.zero;
                 paper2.transform.position += new Vector3(1.5f, -1) * Time.deltaTime * 5;
                 paper2.transform.eulerAngles += new Vector3(0, 0, 40) * Time.deltaTime;
+                PlayOnce(paperRuffle2);
             }
             else if (attackPause > 0)
             {
@@ -343,11 +366,13 @@ public class AttackManager : MonoBehaviour
             {
                 staticSprite.transform.position = new Vector3(0, 20);
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 6;
+                PlayOnce(screenTilt);
             } 
             else if (attackPause > 38)
             {
                 fan.transform.position += Vector3.down * Time.deltaTime * 7;
                 fan.transform.eulerAngles += new Vector3(0, 0, 80) * Time.deltaTime * 3;
+                PlayOnce(fluteSpin);
             }
             else if (attackPause > 37.9f)
             {
@@ -360,10 +385,12 @@ public class AttackManager : MonoBehaviour
             }
             else if (attackPause > 27.999)
             {
+                fluteSpin.Stop();
                 OneRandom(0, -4);
                 OneRandom2(0, -4);
                 fan.SetActive(false);
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 6;
+                PlayOnce(screenTilt);
             }
             else if (attackPause > 25.5f)
             {
@@ -379,10 +406,12 @@ public class AttackManager : MonoBehaviour
             {
                 playerCamera.transform.eulerAngles = new Vector3(0, 0, -40);
                 fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                PlayOnce(screenTilt);
             }
             else if (attackPause > 23)
             {
                 fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                PlayOnce(flamePan);
             }
             else if (attackPause > 21.5f)
             {
@@ -394,11 +423,13 @@ public class AttackManager : MonoBehaviour
                 playerCamera.transform.eulerAngles = new Vector3(0, 0, 40);
                 fire1.transform.position += Vector3.left * Time.deltaTime * 9;
                 fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+                chosenAudio = null;
             }
             else if (attackPause > 18)
             {
                 fire1.transform.position += Vector3.left * Time.deltaTime * 9;
                 fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+                PlayOnce(flamePan);
             } 
             else if (attackPause > 15.325f)
             {
@@ -480,17 +511,12 @@ public class AttackManager : MonoBehaviour
         }
     }
 
-    private void PlayOnce(AudioSource audio, float waitTime)
+    private void PlayOnce(AudioSource audio)
     {
-        float timer = 0;
-        if (!audio.isPlaying && timer <= 0)
+        if (!audio.isPlaying && chosenAudio != audio)
         {
             audio.Play();
-            timer = waitTime;
-        }
-        else if (timer > 0)
-        {
-            timer -= Time.deltaTime;
+            chosenAudio = audio;
         }
     }
 
