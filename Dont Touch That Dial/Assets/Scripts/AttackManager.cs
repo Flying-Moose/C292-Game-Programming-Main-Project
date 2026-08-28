@@ -215,6 +215,7 @@ public class AttackManager : MonoBehaviour
                     blast.transform.position = bomb.transform.position;
                     blast.transform.eulerAngles += new Vector3(0, 0, 30) * Time.deltaTime;
                     bomb.SetActive(false);
+                    flameIgnite.Stop();
                     PlayOnce(bombExplode);
                 }
                 else if (attackPause > 15.5)
