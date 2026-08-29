@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class AttackManager : MonoBehaviour
@@ -66,6 +67,9 @@ public class AttackManager : MonoBehaviour
     GameObject petal3 = null;
     GameObject petal4 = null;
 
+    GameObject fire3 = null;
+    GameObject fire4 = null;
+
     public GameObject playerCamera;
 
     bool COInit = true;
@@ -91,13 +95,16 @@ public class AttackManager : MonoBehaviour
 
     private AudioSource chosenAudio = null;
 
+    private bool hardMode;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         InstantiateEverything();
-        //radioSprite.SetActive(false); // REMOVE ALL THIS LINE AND BELOW
-        //FLsprite.SetActive(true);
-        //FLInit = true;
+        radioSprite.SetActive(false); // REMOVE ALL THIS LINE AND BELOW
+        FLsprite.SetActive(true);
+        FLInit = true;
+        hardMode = true;
     }
 
     // Update is called once per frame
@@ -124,6 +131,11 @@ public class AttackManager : MonoBehaviour
                 attackPause = 32;
                 CLInit = true;
                 COInit = false;
+                if (hardMode)
+                {
+                    blast.transform.localScale *= 1.5f;
+                    blast2.transform.localScale *= 1.5f;
+                }
             }
             COAttacks();
         } 
@@ -137,6 +149,12 @@ public class AttackManager : MonoBehaviour
                 FLInit = true;
                 CLInit = false;
                 fluteSpin.Stop();
+                if (hardMode)
+                {
+                    note1.transform.localScale *= 1.2f;
+                    note2.transform.localScale *= 1.2f;
+                    note3.transform.localScale *= 1.2f;
+                }
             }
             CLAttacks();
         } 
@@ -147,10 +165,15 @@ public class AttackManager : MonoBehaviour
                 FLcollection.SetActive(true);
                 CLcollection.SetActive(false);
                 fire2.transform.eulerAngles = new Vector3(0, 0, 180);
+                fire4.transform.eulerAngles = new Vector3(0, 0, 180);
                 attackPause = 52;
                 COInit = true;
                 FLInit = false;
                 fluteSpin.Stop();
+                if (hardMode)
+                {
+                    fan.transform.localScale *= 1.6f;
+                }
             }
             FLAttacks();
         }
@@ -367,28 +390,50 @@ public class AttackManager : MonoBehaviour
             {
                 staticSprite.transform.position = new Vector3(0, 20);
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 6;
+                if (hardMode) fan.transform.position = new Vector3(0, 20);
                 PlayOnce(screenTilt);
+                if (hardMode)
+                {
+                    OneRandom(1, 2);
+                    if (randInt <= 1.5f) fan.transform.eulerAngles = new Vector3(0, 0, 180);
+                }
             } 
             else if (attackPause > 38)
             {
                 fan.transform.position += Vector3.down * Time.deltaTime * 7;
-                fan.transform.eulerAngles += new Vector3(0, 0, 80) * Time.deltaTime * 3;
+                if (hardMode)
+                {
+                    if (randInt >= 1.5f) fan.transform.eulerAngles += new Vector3(0, 0, 80) * Time.deltaTime * 2.5f;
+                    else fan.transform.eulerAngles += new Vector3(0, 0, -80) * Time.deltaTime * 2.5f;
+                }
+                else fan.transform.eulerAngles += new Vector3(0, 0, 80) * Time.deltaTime * 3;
                 PlayOnce(fluteSpin);
             }
             else if (attackPause > 37.9f)
             {
-                fan.transform.position = new Vector3(1, -10);
+                if (hardMode)
+                {
+                    fan.transform.position = new Vector3(0, -10);
+                    if (randInt >= 1.5f) fan.transform.eulerAngles = new Vector3(0, 0, 180);
+                }
+                else fan.transform.position = new Vector3(1, -10);
             }
             else if (attackPause > 32)
             {
                 fan.transform.position += Vector3.up * Time.deltaTime * 7;
-                fan.transform.eulerAngles += new Vector3(0, 0, 80) * Time.deltaTime * 4;
+                if (hardMode)
+                {
+                    if (randInt >= 1.5f) fan.transform.eulerAngles += new Vector3(0, 0, 80) * Time.deltaTime * 2.5f;
+                    else fan.transform.eulerAngles += new Vector3(0, 0, -80) * Time.deltaTime * 2.5f;
+                }
+                else fan.transform.eulerAngles += new Vector3(0, 0, 80) * Time.deltaTime * 3;
+                ifRand = true;
             }
             else if (attackPause > 27.999)
             {
                 fluteSpin.Stop();
-                OneRandom(0, -4);
-                OneRandom2(0, -4);
+                OneRandom(0.5f, -4.5f);
+                OneRandom2(0.5f, -4.5f);
                 fan.SetActive(false);
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 6;
                 PlayOnce(screenTilt);
@@ -406,41 +451,112 @@ public class AttackManager : MonoBehaviour
             else if (attackPause > 25)
             {
                 playerCamera.transform.eulerAngles = new Vector3(0, 0, -40);
-                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
                 PlayOnce(screenTilt);
+                if (hardMode)
+                {
+                    OneRandom(0.5f, -4.5f);
+                    OneRandom2(0.5f, -4.5f);
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 11;
+                    fire3.transform.position = new Vector3(20, randInt);
+                    fire4.transform.position = new Vector3(-20, randInt2);
+                }
+                else
+                {
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                }
             }
             else if (attackPause > 23)
             {
-                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
                 PlayOnce(flamePan);
+                if (hardMode)
+                {
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 11;
+                    fire3.transform.position += Vector3.left * Time.deltaTime * 8;
+                    ifRand = true;
+                    ifRand2 = true;
+                }
+                else
+                {
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                }
             }
             else if (attackPause > 21.5f)
             {
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, 30) * Time.deltaTime;
-                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                if (hardMode)
+                {
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 11;
+                    fire3.transform.position += Vector3.left * Time.deltaTime * 8;
+                }
+                else
+                {
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                }
             }
             else if (attackPause > 21)
             {
                 playerCamera.transform.eulerAngles = new Vector3(0, 0, 40);
-                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
-                fire2.transform.position += Vector3.right * Time.deltaTime * 9;
                 chosenAudio = null;
+                if (hardMode)
+                {
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 11;
+                    fire2.transform.position += Vector3.right * Time.deltaTime * 11;
+                    fire3.transform.position += Vector3.left * Time.deltaTime * 8;
+                }
+                else
+                {
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                    fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+                }
             }
             else if (attackPause > 18)
             {
-                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
-                fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+                if (hardMode)
+                {
+                    fire3.transform.position += Vector3.left * Time.deltaTime * 8;
+                    fire4.transform.position += Vector3.right * Time.deltaTime * 8;
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 11;
+                    fire2.transform.position += Vector3.right * Time.deltaTime * 11;
+                }
+                else
+                {
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                    fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+                }
                 PlayOnce(flamePan);
             } 
             else if (attackPause > 15.325f)
             {
                 playerCamera.transform.eulerAngles += new Vector3(0, 0, -30) * Time.deltaTime;
-                fire1.transform.position += Vector3.left * Time.deltaTime * 9;
-                fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+                if (hardMode)
+                {
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 11;
+                    fire2.transform.position += Vector3.right * Time.deltaTime * 11;
+                    fire3.transform.position += Vector3.left * Time.deltaTime * 8;
+                    fire4.transform.position += Vector3.right * Time.deltaTime * 8;
+                    OneRandom(0.5f, 2.5f);
+                    OneRandom2(0.5f, 2.5f);
+                }
+                else
+                {
+                    fire1.transform.position += Vector3.left * Time.deltaTime * 9;
+                    fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+                }
             } 
             else if (attackPause > 11)
             {
-                fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+                if (hardMode)
+                {
+                    fire2.transform.position += Vector3.right * Time.deltaTime * 11;
+                    fire3.transform.position += Vector3.left * Time.deltaTime * 8;
+                    fire4.transform.position += Vector3.right * Time.deltaTime * 8;
+                    ifRand = true;
+                    ifRand2 = true;
+                }
+                else
+                {
+                    fire2.transform.position += Vector3.right * Time.deltaTime * 9;
+                }
                 petal1.transform.position = new Vector3(0, 3);
                 petal2.transform.position = new Vector3(0, 3);
                 petal3.transform.position = new Vector3(0, 3);
@@ -450,10 +566,31 @@ public class AttackManager : MonoBehaviour
                 petal3.SetActive(false);
                 petal4.SetActive(false);
             }
+            else if (attackPause > 9.3f && hardMode)
+            {
+                fire1.transform.position = new Vector3(20, -1);
+                fire2.transform.position = new Vector3(-20, -3);
+                fire3.transform.position = new Vector3(20, -2);
+                fire4.transform.position = new Vector3(-20, -4);
+
+                petal1.SetActive(true);
+                petal2.SetActive(true);
+                petal3.SetActive(true);
+                petal4.SetActive(true);
+                petal1.transform.position += new Vector3(-randInt, -1.1f) * Time.deltaTime * 3;
+                petal2.transform.position += new Vector3(-1.5f, -0.65f) * Time.deltaTime * 3;
+                petal3.transform.position += new Vector3(randInt2, -0.9f) * Time.deltaTime * 3;
+                petal4.transform.position += new Vector3(1.5f, -1.3f) * Time.deltaTime * 3;
+            }
             else if (attackPause > 4)
             {
                 fire1.transform.position = new Vector3(20, -1);
                 fire2.transform.position = new Vector3(-20, -3);
+                if (hardMode)
+                {
+                    fire3.transform.position = new Vector3(20, -2);
+                    fire4.transform.position = new Vector3(-20, -4);
+                }
                 petal1.SetActive(true);
                 petal2.SetActive(true);
                 petal3.SetActive(true);
@@ -462,19 +599,39 @@ public class AttackManager : MonoBehaviour
                 petal2.transform.eulerAngles += new Vector3(0, 0, 10) * Time.deltaTime * 2;
                 petal3.transform.eulerAngles += new Vector3(0, 0, 20) * Time.deltaTime * 2;
                 petal4.transform.eulerAngles += new Vector3(0, 0, -10) * Time.deltaTime * 2;
-                petal1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 3;
-                petal2.transform.position += new Vector3(-0.5f, -1.2f) * Time.deltaTime * 3;
-                petal3.transform.position += new Vector3(0.3f, -0.8f) * Time.deltaTime * 3;
-                petal4.transform.position += new Vector3(0.5f, -1.3f) * Time.deltaTime * 3;
+                if (hardMode)
+                {
+                    petal1.transform.position += new Vector3(randInt, -1.1f) * Time.deltaTime * 3;
+                    petal2.transform.position += new Vector3(1.5f, -0.65f) * Time.deltaTime * 3;
+                    petal3.transform.position += new Vector3(-randInt2, -0.9f) * Time.deltaTime * 3;
+                    petal4.transform.position += new Vector3(-1.5f, -1.3f) * Time.deltaTime * 3;
+                }
+                else
+                {
+                    petal1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 3;
+                    petal2.transform.position += new Vector3(-0.5f, -1.2f) * Time.deltaTime * 3;
+                    petal3.transform.position += new Vector3(0.3f, -0.8f) * Time.deltaTime * 3;
+                    petal4.transform.position += new Vector3(0.5f, -1.3f) * Time.deltaTime * 3;
+                }
             }
             else if (attackPause > 1)
             {
                 petal1.transform.eulerAngles += new Vector3(0, 0, 10) * Time.deltaTime * 2;
                 petal3.transform.eulerAngles += new Vector3(0, 0, -20) * Time.deltaTime * 2;
-                petal1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 3;
-                petal2.transform.position += new Vector3(-0.5f, -1.2f) * Time.deltaTime * 3;
-                petal3.transform.position += new Vector3(0.3f, -0.8f) * Time.deltaTime * 3;
-                petal4.transform.position += new Vector3(0.5f, -1.3f) * Time.deltaTime * 3;
+                if (hardMode)
+                {
+                    petal1.transform.position += new Vector3(randInt, -1.1f) * Time.deltaTime * 3;
+                    petal2.transform.position += new Vector3(1.5f, -0.65f) * Time.deltaTime * 3;
+                    petal3.transform.position += new Vector3(-randInt2, -0.9f) * Time.deltaTime * 3;
+                    petal4.transform.position += new Vector3(-1.5f, -1.3f) * Time.deltaTime * 3;
+                }
+                else
+                {
+                    petal1.transform.position += new Vector3(-0.1f, -1) * Time.deltaTime * 3;
+                    petal2.transform.position += new Vector3(-0.5f, -1.2f) * Time.deltaTime * 3;
+                    petal3.transform.position += new Vector3(0.3f, -0.8f) * Time.deltaTime * 3;
+                    petal4.transform.position += new Vector3(0.5f, -1.3f) * Time.deltaTime * 3;
+                }
             }
             else if (attackPause > 0)
             {
@@ -577,6 +734,9 @@ public class AttackManager : MonoBehaviour
         petal2.transform.parent = FLcollection.transform;
         petal3.transform.parent = FLcollection.transform;
         petal4.transform.parent = FLcollection.transform;
+
+        fire3 = Instantiate(FLfire, new Vector3(20, -2), Quaternion.identity);
+        fire4 = Instantiate(FLfire, new Vector3(-20, -4), Quaternion.identity);
     }
     void ResetPositions()
     {
@@ -602,6 +762,8 @@ public class AttackManager : MonoBehaviour
         fan.transform.position = new Vector3(-1, 20);
         fire1.transform.position = new Vector3(20, -1);
         fire2.transform.position = new Vector3(-20, -3);
+        fire3.transform.position = new Vector3(20, -2);
+        fire4.transform.position = new Vector3(-20, -4);
         petal1.transform.position = new Vector3(0, 15);
         petal2.transform.position = new Vector3(0, 15);
         petal3.transform.position = new Vector3(0, 15);

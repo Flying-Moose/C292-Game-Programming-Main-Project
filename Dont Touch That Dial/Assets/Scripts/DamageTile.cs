@@ -33,7 +33,7 @@ public class DamageTile : MonoBehaviour
         readyToCountDown = true;
         country.SetActive(false);
         classical.SetActive(false);
-        flamenco.SetActive(false);
+        //flamenco.SetActive(false);
         bossDamageMask.SetActive(false);
         stopDamageTile = true;
     }
