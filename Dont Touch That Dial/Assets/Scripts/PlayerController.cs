@@ -49,26 +49,26 @@ public class PlayerController : MonoBehaviour
     {
         BarrierCheck();
         
-        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && !disableLeft && !moving){
+        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && !disableLeft && !moving){
             currPlayerPosition.x -= 1;
             moveDist.x -= 1;
             spriteRenderer.flipX = false;
             spriteRenderer.sprite = LRPlayerSprite;
         }
-        if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && !disableRight && !moving)
+        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && !disableRight && !moving)
         {
             currPlayerPosition.x += 1;
             moveDist.x += 1;
             spriteRenderer.flipX = true;
             spriteRenderer.sprite = LRPlayerSprite;
         }
-        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && !disableUp && !moving)
+        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && !disableUp && !moving)
         {
             currPlayerPosition.y += 1;
             moveDist.y += 1;
             spriteRenderer.sprite = upPlayerSprite;
         }
-        if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && !disableDown && !moving)
+        if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && !disableDown && !moving)
         {
             currPlayerPosition.y -= 1;
             moveDist.y -= 1;

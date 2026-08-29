@@ -173,6 +173,10 @@ public class AttackManager : MonoBehaviour
                 if (hardMode)
                 {
                     fan.transform.localScale *= 1.6f;
+                    fire1.transform.localScale *= 1.1f;
+                    fire2.transform.localScale *= 1.1f;
+                    fire3.transform.localScale *= 1.1f;
+                    fire4.transform.localScale *= 1.1f;
                 }
             }
             FLAttacks();
@@ -580,7 +584,7 @@ public class AttackManager : MonoBehaviour
                 petal1.transform.position += new Vector3(-randInt, -1.1f) * Time.deltaTime * 3;
                 petal2.transform.position += new Vector3(-1.5f, -0.65f) * Time.deltaTime * 3;
                 petal3.transform.position += new Vector3(randInt2, -0.9f) * Time.deltaTime * 3;
-                petal4.transform.position += new Vector3(1.5f, -1.3f) * Time.deltaTime * 3;
+                petal4.transform.position += new Vector3(1.5f, -1.35f) * Time.deltaTime * 3;
             }
             else if (attackPause > 4)
             {
@@ -604,7 +608,7 @@ public class AttackManager : MonoBehaviour
                     petal1.transform.position += new Vector3(randInt, -1.1f) * Time.deltaTime * 3;
                     petal2.transform.position += new Vector3(1.5f, -0.65f) * Time.deltaTime * 3;
                     petal3.transform.position += new Vector3(-randInt2, -0.9f) * Time.deltaTime * 3;
-                    petal4.transform.position += new Vector3(-1.5f, -1.3f) * Time.deltaTime * 3;
+                    petal4.transform.position += new Vector3(-1.5f, -1.35f) * Time.deltaTime * 3;
                 }
                 else
                 {
@@ -623,7 +627,7 @@ public class AttackManager : MonoBehaviour
                     petal1.transform.position += new Vector3(randInt, -1.1f) * Time.deltaTime * 3;
                     petal2.transform.position += new Vector3(1.5f, -0.65f) * Time.deltaTime * 3;
                     petal3.transform.position += new Vector3(-randInt2, -0.9f) * Time.deltaTime * 3;
-                    petal4.transform.position += new Vector3(-1.5f, -1.3f) * Time.deltaTime * 3;
+                    petal4.transform.position += new Vector3(-1.5f, -1.35f) * Time.deltaTime * 3;
                 }
                 else
                 {
