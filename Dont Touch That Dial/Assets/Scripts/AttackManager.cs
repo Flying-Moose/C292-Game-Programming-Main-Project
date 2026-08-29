@@ -59,6 +59,8 @@ public class AttackManager : MonoBehaviour
     GameObject paper1 = null;
     GameObject paper2 = null;
 
+    GameObject paper3 = null;
+
     GameObject fan = null;
     GameObject fire1 = null;
     GameObject fire2 = null;
@@ -102,8 +104,8 @@ public class AttackManager : MonoBehaviour
     {
         InstantiateEverything();
         radioSprite.SetActive(false); // REMOVE ALL THIS LINE AND BELOW
-        COsprite.SetActive(true);
-        COInit = true;
+        CLsprite.SetActive(true);
+        CLInit = true;
         hardMode = true;
     }
 
@@ -383,6 +385,8 @@ public class AttackManager : MonoBehaviour
                 {
                     flute.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 13;
                     flute.transform.position += Vector3.up * Time.deltaTime * 10;
+                    paper3.transform.eulerAngles += new Vector3(0, 0, 50) * Time.deltaTime;
+                    paper3.transform.position += new Vector3(randInt, -1) * Time.deltaTime * 6;
                 }
             }
             else if (attackPause > 1)
@@ -392,6 +396,11 @@ public class AttackManager : MonoBehaviour
                 flute.transform.eulerAngles = Vector3.zero;
                 paper2.transform.position += new Vector3(1.5f, -1) * Time.deltaTime * 5;
                 paper2.transform.eulerAngles += new Vector3(0, 0, 40) * Time.deltaTime;
+                if (hardMode)
+                {
+                    paper3.transform.position += new Vector3(1.5f, -1) * Time.deltaTime * 4;
+                    paper3.transform.eulerAngles += new Vector3(0, 0, 40) * Time.deltaTime;
+                }
                 PlayOnce(paperRuffle2);
             }
             else if (attackPause > 0)
@@ -745,6 +754,9 @@ public class AttackManager : MonoBehaviour
         paper1.transform.parent = CLcollection.transform;
         paper2.transform.parent = CLcollection.transform;
 
+        paper3 = Instantiate(CLpaper1, new Vector3(20, 15), Quaternion.identity);
+        paper3.transform.parent = CLcollection.transform;
+
         fan = Instantiate(FLfan, new Vector3(-1, 20), Quaternion.identity);
         fire1 = Instantiate(FLfire, new Vector3(20, -1), Quaternion.identity);
         fire2 = Instantiate(FLfire, new Vector3(-20, -3), Quaternion.identity);
@@ -762,6 +774,8 @@ public class AttackManager : MonoBehaviour
 
         fire3 = Instantiate(FLfire, new Vector3(20, -2), Quaternion.identity);
         fire4 = Instantiate(FLfire, new Vector3(-20, -4), Quaternion.identity);
+        fire3.transform.parent = FLcollection.transform;
+        fire4.transform.parent = FLcollection.transform;
     }
     void ResetPositions()
     {
@@ -784,6 +798,7 @@ public class AttackManager : MonoBehaviour
         flute.transform.position = new Vector3(0.1f, 10);
         paper1.transform.position = new Vector3(20, 15);
         paper2.transform.position = new Vector3(-16, 15);
+        paper3.transform.position = new Vector3(20, 15);
         fan.transform.position = new Vector3(-1, 20);
         fire1.transform.position = new Vector3(20, -1);
         fire2.transform.position = new Vector3(-20, -3);
