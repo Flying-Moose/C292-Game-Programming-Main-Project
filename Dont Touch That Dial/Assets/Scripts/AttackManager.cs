@@ -102,8 +102,8 @@ public class AttackManager : MonoBehaviour
     {
         InstantiateEverything();
         radioSprite.SetActive(false); // REMOVE ALL THIS LINE AND BELOW
-        FLsprite.SetActive(true);
-        FLInit = true;
+        COsprite.SetActive(true);
+        COInit = true;
         hardMode = true;
     }
 
@@ -315,6 +315,11 @@ public class AttackManager : MonoBehaviour
                 note2.transform.position += new Vector3(randInt2, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+                if (hardMode && stanza1.transform.position.y < -1.3f)
+                {
+                    stanza1.transform.position += Vector3.up * Time.deltaTime;
+                    stanza2.transform.position += Vector3.up * Time.deltaTime;
+                }
                 PlayOnce(fluteNote2);
             }
             else if (attackPause > 30)
@@ -324,6 +329,11 @@ public class AttackManager : MonoBehaviour
                 note3.transform.position += new Vector3(randInt, -1) * Time.deltaTime * 8;
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
+                if (hardMode && stanza2.transform.position.y > -3.3f)
+                {
+                    stanza1.transform.position += Vector3.down * Time.deltaTime;
+                    stanza2.transform.position += Vector3.down * Time.deltaTime;
+                }
                 PlayOnce(fluteNote3);
             }
             else if (attackPause > 26.6)
@@ -344,7 +354,8 @@ public class AttackManager : MonoBehaviour
                 OneRandom2(1, 1.2f);
                 stanza1.transform.position += Vector3.left * Time.deltaTime * 4;
                 stanza2.transform.position += Vector3.left * Time.deltaTime * 4;
-                flute.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 5;
+                if (hardMode) flute.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 13;
+                else flute.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 7;
                 PlayOnce(fluteSpin);
             } else if (attackPause > 8)
             {
@@ -352,10 +363,14 @@ public class AttackManager : MonoBehaviour
                 ifRand2 = true;
                 stanza1.transform.position = new Vector3(20, -2);
                 stanza2.transform.position = new Vector3(31.5f, -3);
-                flute.transform.position += Vector3.down * Time.deltaTime * 7;
                 paper1.transform.eulerAngles += new Vector3(0, 0, 50) * Time.deltaTime;
                 paper1.transform.position += new Vector3(randInt, -1) * Time.deltaTime * 7;
-                fluteSpin.Stop();
+                if (hardMode) flute.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 13;
+                else
+                {
+                    flute.transform.position += Vector3.down * Time.deltaTime * 7;
+                    fluteSpin.Stop();
+                }
             }
             else if (attackPause > 4)
             {
@@ -364,9 +379,15 @@ public class AttackManager : MonoBehaviour
                 paper2.transform.position += new Vector3(randInt2, -1.5f) * Time.deltaTime * 5;
                 paper2.transform.eulerAngles += new Vector3(0, 0, -40) * Time.deltaTime;
                 PlayOnce(paperRuffle);
+                if (hardMode)
+                {
+                    flute.transform.eulerAngles += new Vector3(0, 0, 15) * Time.deltaTime * 13;
+                    flute.transform.position += Vector3.up * Time.deltaTime * 10;
+                }
             }
             else if (attackPause > 1)
             {
+                fluteSpin.Stop();
                 flute.transform.position = new Vector3(0.1f, 10);
                 flute.transform.eulerAngles = Vector3.zero;
                 paper2.transform.position += new Vector3(1.5f, -1) * Time.deltaTime * 5;
