@@ -32,7 +32,7 @@ public class DamageTile : MonoBehaviour
         damageTile.gameObject.transform.position = damageTileNewPosition;
         readyToCountDown = true;
         country.SetActive(false);
-        //classical.SetActive(false);
+        classical.SetActive(false);
         flamenco.SetActive(false);
         bossDamageMask.SetActive(false);
         stopDamageTile = true;

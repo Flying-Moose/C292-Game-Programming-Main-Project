@@ -5742,6 +5742,7 @@ MonoBehaviour:
   flameIgnite: {fileID: 2145799628}
   flamePan: {fileID: 484933252}
   screenTilt: {fileID: 681126908}
+  player: {fileID: 1442560977}
 --- !u!4 &1142117101
 Transform:
   m_ObjectHideFlags: 0
@@ -7899,6 +7900,7 @@ MonoBehaviour:
   classical: {fileID: 2114564106}
   flamenco: {fileID: 329582209}
   damage: {fileID: 1758110306}
+  hardMode: 0
 --- !u!212 &1442560982
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
     public AudioSource damage;
 
+    public bool hardMode;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -163,11 +165,18 @@ public class PlayerController : MonoBehaviour
         }
         if ((player.transform.position == Vector3.zero) && radio.activeSelf && (Input.GetKeyDown(KeyCode.UpArrow) || (Input.GetKeyDown(KeyCode.W))))
         {
+            hardMode = false;
+            country.SetActive(true);
+            radio.SetActive(false);
+        } 
+        else if ((player.transform.position == new Vector3(1, 0, 0)) && radio.activeSelf && (Input.GetKeyDown(KeyCode.UpArrow) || (Input.GetKeyDown(KeyCode.W))))
+        {
+            hardMode = true;
             country.SetActive(true);
             radio.SetActive(false);
         }
 
-        if (damaged)
+            if (damaged)
         {
             spriteRenderer.sprite = null;
 

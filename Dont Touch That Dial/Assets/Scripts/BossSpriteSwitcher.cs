@@ -69,7 +69,7 @@ public class BossSpriteSwitcher : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //timerSetterFL = true; // REMOVE
+        //timerSetterCL = true; // REMOVE
     }
 
     // Update is called once per frame
@@ -246,16 +246,16 @@ public class BossSpriteSwitcher : MonoBehaviour
             {
                 classicalSpriteRenderer.sprite = classicalStand;
             }
-            else if (inbetweenTimer > 9)
+            else if (inbetweenTimer > 5)
             {
                 
             }
-            else if (inbetweenTimer > 8)
+            else if (inbetweenTimer > 4)
             {
                 classicalSpriteRenderer.sprite = classicalCatch;
                 PlayOnce(grab);
             }
-            else if (inbetweenTimer > 7)
+            else if (inbetweenTimer > 3)
             {
                 classical.transform.position = new Vector3(0, 3.7f);
                 classicalSingle.transform.position = new Vector3(0, 20);
@@ -389,8 +389,8 @@ public class BossSpriteSwitcher : MonoBehaviour
             }
             else if (inbetweenTimer > 10)
             {
-                flamencoSingle.transform.position += Vector3.left * Time.deltaTime * 5;
-                flamenco.transform.position += Vector3.left * Time.deltaTime * 5;
+                flamencoSingle.transform.position += Vector3.right * Time.deltaTime * 8;
+                flamenco.transform.position += Vector3.right * Time.deltaTime * 8;
                 flamencoSpriteRenderer.sprite = flamencoRose2;
                 dressSpin.Stop();
                 PlayOnce(lingering);
@@ -406,8 +406,8 @@ public class BossSpriteSwitcher : MonoBehaviour
             }
             else if (inbetweenTimer > 6)
             {
-                flamencoSingle.transform.position += Vector3.right * Time.deltaTime * 5;
-                flamenco.transform.position += Vector3.right * Time.deltaTime * 5;
+                flamencoSingle.transform.position += Vector3.left * Time.deltaTime * 8;
+                flamenco.transform.position += Vector3.left * Time.deltaTime * 8;
             }
             else if (inbetweenTimer > 5)
             {
