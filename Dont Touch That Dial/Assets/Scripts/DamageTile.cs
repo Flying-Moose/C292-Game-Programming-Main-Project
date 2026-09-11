@@ -50,7 +50,7 @@ public class DamageTile : MonoBehaviour
             else if (!stopDamageTile)
             {
                 randX = Random.Range(-2, 2);
-                randY = Random.Range(0, -4);
+                randY = Random.Range(0, -5);
                 damageTileNewPosition.x = randX;
                 damageTileNewPosition.y = randY;
                 damageTile.gameObject.transform.position = damageTileNewPosition;
@@ -65,7 +65,10 @@ public class DamageTile : MonoBehaviour
         }
         if (radio.activeSelf)
         {
+            damageTileNewPosition.y = 15;
+            damageTile.gameObject.transform.position = damageTileNewPosition;
             stopDamageTile = true;
+            damageInbetweenTimer = 6;
             bossHealth = 0;
         }
 

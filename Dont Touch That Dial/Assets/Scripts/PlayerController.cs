@@ -40,10 +40,14 @@ public class PlayerController : MonoBehaviour
 
     public bool hardMode;
 
+    public bool beatBoss;
+    public bool stillAlive;
+    public bool disablePlayerMovement;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        disablePlayerMovement = false;
     }
 
     // Update is called once per frame
@@ -51,30 +55,34 @@ public class PlayerController : MonoBehaviour
     {
         BarrierCheck();
         
-        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && !disableLeft && !moving){
-            currPlayerPosition.x -= 1;
-            moveDist.x -= 1;
-            spriteRenderer.flipX = false;
-            spriteRenderer.sprite = LRPlayerSprite;
-        }
-        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && !disableRight && !moving)
+        if (!disablePlayerMovement)
         {
-            currPlayerPosition.x += 1;
-            moveDist.x += 1;
-            spriteRenderer.flipX = true;
-            spriteRenderer.sprite = LRPlayerSprite;
-        }
-        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && !disableUp && !moving)
-        {
-            currPlayerPosition.y += 1;
-            moveDist.y += 1;
-            spriteRenderer.sprite = upPlayerSprite;
-        }
-        if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && !disableDown && !moving)
-        {
-            currPlayerPosition.y -= 1;
-            moveDist.y -= 1;
-            spriteRenderer.sprite = downPlayerSprite;
+            if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && !disableLeft && !moving)
+            {
+                currPlayerPosition.x -= 1;
+                moveDist.x -= 1;
+                spriteRenderer.flipX = false;
+                spriteRenderer.sprite = LRPlayerSprite;
+            }
+            if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && !disableRight && !moving)
+            {
+                currPlayerPosition.x += 1;
+                moveDist.x += 1;
+                spriteRenderer.flipX = true;
+                spriteRenderer.sprite = LRPlayerSprite;
+            }
+            if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && !disableUp && !moving)
+            {
+                currPlayerPosition.y += 1;
+                moveDist.y += 1;
+                spriteRenderer.sprite = upPlayerSprite;
+            }
+            if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && !disableDown && !moving)
+            {
+                currPlayerPosition.y -= 1;
+                moveDist.y -= 1;
+                spriteRenderer.sprite = downPlayerSprite;
+            }
         }
 
         if (player.gameObject.transform.position != currPlayerPosition)
@@ -88,43 +96,7 @@ public class PlayerController : MonoBehaviour
             moving = false;
             spriteRenderer.sprite = playerSprite;
         }
-
-        if (health <= 0)
-        {
-            country.SetActive(false);
-            classical.SetActive(false);
-            flamenco.SetActive(false);
-            radio.SetActive(true);
-        }
-        if (radio.activeSelf)
-        {
-            health = 3;
-        }
-
-        if (health == 3 && !radio.activeSelf)
-        {
-            heart3.SetActive(true);
-            heart2.SetActive(true);
-            heart1.SetActive(true);
-        } 
-        else if (health == 2 && !radio.activeSelf)
-        {
-            heart3.SetActive(false);
-            heart2.SetActive(true);
-            heart1.SetActive(true);
-        }
-        else if (health == 1 && !radio.activeSelf)
-        {
-            heart3.SetActive(false);
-            heart2.SetActive(false);
-            heart1.SetActive(true);
-        }
-        else if (radio.activeSelf)
-        {
-            heart3.SetActive(false);
-            heart2.SetActive(false);
-            heart1.SetActive(false);
-        }
+        
 
         void Moving(Vector3 desiredMovement)
             {
@@ -168,12 +140,16 @@ public class PlayerController : MonoBehaviour
             hardMode = false;
             country.SetActive(true);
             radio.SetActive(false);
+            stillAlive = true;
+            beatBoss = false;
         } 
         else if ((player.transform.position == new Vector3(1, 0, 0)) && radio.activeSelf && (Input.GetKeyDown(KeyCode.UpArrow) || (Input.GetKeyDown(KeyCode.W))))
         {
             hardMode = true;
             country.SetActive(true);
             radio.SetActive(false);
+            stillAlive = true;
+            beatBoss = false;
         }
 
             if (damaged)
@@ -189,6 +165,54 @@ public class PlayerController : MonoBehaviour
                 spriteRenderer.sprite = playerSprite;
                 damaged = false;
             }
+        }
+
+        if (health <= 0)
+        {
+            country.SetActive(false);
+            classical.SetActive(false);
+            flamenco.SetActive(false);
+            radio.SetActive(true);
+        }
+        if (health <= 0 && radio.activeSelf)
+        {
+            stillAlive = false;
+        }
+
+        if (health == 3 && !radio.activeSelf)
+        {
+            heart3.SetActive(true);
+            heart2.SetActive(true);
+            heart1.SetActive(true);
+        }
+        else if (health == 2 && !radio.activeSelf)
+        {
+            heart3.SetActive(false);
+            heart2.SetActive(true);
+            heart1.SetActive(true);
+        }
+        else if (health == 1 && !radio.activeSelf)
+        {
+            heart3.SetActive(false);
+            heart2.SetActive(false);
+            heart1.SetActive(true);
+        }
+        else if (!radio.activeSelf)
+        {
+            heart3.SetActive(false);
+            heart2.SetActive(false);
+            heart1.SetActive(false);
+        }
+
+        if (radio.activeSelf && stillAlive)
+        {
+            beatBoss = true;
+            stillAlive = false;
+        }
+
+        if (radio.activeSelf)
+        {
+            health = 3;
         }
     }
     public void BarrierCheck()

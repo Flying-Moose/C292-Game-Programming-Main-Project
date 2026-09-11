@@ -11,6 +11,7 @@ public class BossSpriteSwitcher : MonoBehaviour
     public GameObject radio;
     public GameObject title;
     public GameObject arrow;
+    public GameObject arrow2;
 
     private float inbetweenTimer;
     private bool timerSetterCO;
@@ -65,11 +66,13 @@ public class BossSpriteSwitcher : MonoBehaviour
     public AudioSource grab;
 
     private AudioSource chosenAudio = null;
+    public bool beatHard;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //timerSetterCL = true; // REMOVE
+        arrow2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -87,6 +90,7 @@ public class BossSpriteSwitcher : MonoBehaviour
             flamencoSingle.transform.position = new Vector3(0, 20);
             title.SetActive(true);
             arrow.SetActive(true);
+            if (beatHard) arrow2.SetActive(true);
         } 
         else if (country.activeSelf)
         {
@@ -99,6 +103,7 @@ public class BossSpriteSwitcher : MonoBehaviour
             CountrySpriteMovement();
             title.SetActive(false);
             arrow.SetActive(false);
+            if (beatHard) arrow2.SetActive(false);
         }
         else if (classical.activeSelf)
         {
